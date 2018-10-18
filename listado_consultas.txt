@@ -88,7 +88,7 @@ yellow (Q943) - amarillo
 - Mushroom_cap_shape.(P784)
 (sacar iconos)
 
-campanulate mushroom cap (Q19887953) - gorro de champiñón campanulado
+campanulate mushroom cap (Q19887953) - gorro de champiñón campanulado <!-- NO SALE -->
 conical mushroom cap (Q19887954)-tapa de hongo cónico
 convex mushroom cap (Q14544535) -tapa de hongo convexo
 depressed mushroom cap (Q19887955)- tapa de seta deprimida
@@ -96,7 +96,7 @@ flat mushroom cap (Q19887957)-tapa plana de setas
 infundibuliform mushroom cap (Q19887958)-tapa de seta infundibuliforme
 offset mushroom cap (Q14544541)-tapa de seta offset
 ovate mushroom cap (Q19887961)-tapa de seta ovada
-umbilicate mushroom cap (Q19887962)-tapa de seta umbilicato
+umbilicate mushroom cap (Q19887962)-tapa de seta umbilicato <!-- NO SALE -->
 umbonate mushroom cap (Q19887964)- tapa de hongo
 no mushroom cap (Q19887965) - sin tapa de seta
 concave to plane (Q23058598)-cóncavo al plano 

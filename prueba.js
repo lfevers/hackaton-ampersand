@@ -51,6 +51,11 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 function prueba(){
 
 	var color = document.getElementById("color").value;
+  var shape= document.querySelector('input[name="shape"]:checked').value;
+
+  console.log("FORMA: " + shape);
+
+
 	var consulta = `SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
@@ -59,13 +64,10 @@ function prueba(){
 
   ?Agaricales wdt:P787 ?spore_print_color.
   ?Agaricales wdt:P787 wd:` + color + `.
-  ?Agaricales wdt:P784 ?mushroom_cap_shape.
-  ?Agaricales wdt:P784 wd:Q19887957.
-  ?Agaricales wdt:P786 ?car_cter_del_estipe.
-  ?Agaricales wdt:P786 wd:Q19887987.
-  ?Agaricales wdt:P785 ?accesorios_del_himenio.
-  ?Agaricales wdt:P785 wd:Q14544563.
   
+  ?Agaricales wdt:P784 ?mushroom_cap_shape.
+  ?Agaricales wdt:P784 wd:` + shape + `.
+ 
   OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
 }
 `;
