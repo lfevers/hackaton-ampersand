@@ -55,7 +55,8 @@ function prueba(){
 
   console.log("FORMA: " + shape);
 
-
+  // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
+  //ESO LO MIRAIS CON CLAUDIA
 	var consulta = `SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
@@ -72,7 +73,7 @@ function prueba(){
 }
 `;
 
-
+//DESDE AQUI HASTA ....
 const endpointUrl = 'https://query.wikidata.org/sparql',
       sparqlQuery = consulta ,
       fullUrl = endpointUrl + '?query=' + encodeURIComponent( sparqlQuery ),
@@ -80,15 +81,19 @@ const endpointUrl = 'https://query.wikidata.org/sparql',
 
 fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
     const { head: { vars }, results } = json;
-    console.log(results.bindings);
+
+    //...AQUI NO SE TOCA
+    console.log(results.bindings); //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
+    //RESULT BINDINGS ES EL VECTOR CON TODOS LOS RESULTADOS
     var n_results = 0;
     
     var html = "";
+    //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
     for ( const result of results.bindings ) {
     	//MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
-    	html += 
-    	'<article>' +
-    	'<h3>' + result.AgaricalesLabel.value + '</h3>' +
+    	html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
+    	'<article>' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
+    	'<h3>' + result.AgaricalesLabel.value + '</h3>' + 
     	'<img src=' + JSON.stringify(result.imagen.value) + ' width="50" alt="asdf"></img>' +
     	'<p> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</p>' + 
     	'</article>'
