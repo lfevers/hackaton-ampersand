@@ -89,8 +89,36 @@ yellow (Q943) - amarillo
 (sacar iconos)
 
 campanulate mushroom cap (Q19887953) - gorro de champiñón campanulado
+conical mushroom cap (Q19887954)-tapa de hongo cónico
+convex mushroom cap (Q14544535) -tapa de hongo convexo
+depressed mushroom cap (Q19887955)- tapa de seta deprimida
+flat mushroom cap (Q19887957)-tapa plana de setas
+infundibuliform mushroom cap (Q19887958)-tapa de seta infundibuliforme
+offset mushroom cap (Q14544541)-tapa de seta offset
+ovate mushroom cap (Q19887961)-tapa de seta ovada
+umbilicate mushroom cap (Q19887962)-tapa de seta umbilicato
+umbonate mushroom cap (Q19887964)- tapa de hongo
+no mushroom cap (Q19887965) - sin tapa de seta
+concave to plane (Q23058598)-cóncavo al plano 
 
+- Caracter de la estirpe (P786)
+(sacar iconos)
 
+bare stipe (Q14544581)-estípite desnudo
+ring stipe (Q14544582)-anilla de anillo
+volva stipe (Q19887985)- stipe volva
+ring and volva stipe (Q19887987) -anillo y volva stipe
+cortina stipe (Q19887988)- cortina stipe
 
-
+- Accesorios del himenio (P785)
+(sacar icono)
+adnate hymenium attachment (Q14544569) - adenato de himen adjunto
+adnexed hymenium attachment (Q19887923)-adjunto de himenio anexado 
+decurrent hymenium attachment (Q19887925) -fijación de himenio decurrente
+emarginate hymenium attachment (Q19887926) - adjunto de himenio emarginado
+free hymenium attachment (Q14544563)-fijación de himenio libre
+seceding hymenium attachment (Q19887929) - adjunto de himenio secante
+sinuate hymenium attachment (Q19887930) - sinuato de himen adjunto
+subdecurrent hymenium attachment (Q19887931)-adjunto de himenio subdecurrente
+no hymenium attachment (Q19887932)-sin fijación de himenio
 
