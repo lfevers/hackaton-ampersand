@@ -1,0 +1,9 @@
+BUSCAR TODAS LAS SETAS: (las estamos fitlrando solo las k tienen obligatoriamente la propiedad de comestibilidad e imagen)
+
+SELECT ?Agaricales ?AgaricalesLabel ?comestibilidad ?comestibilidadLabel ?imagen WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
+  ?Agaricales wdt:P789 ?comestibilidad.
+  ?Agaricales wdt:P18 ?imagen.
+}
+
