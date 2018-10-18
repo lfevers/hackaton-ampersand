@@ -7,3 +7,90 @@ SELECT ?Agaricales ?AgaricalesLabel ?comestibilidad ?comestibilidadLabel ?imagen
   ?Agaricales wdt:P18 ?imagen.
 }
 
+Dame la seta que cumple estos filtros:
+- Que tenga comestibilidad (P789)
+- Que tenga imagen (P18)
+- Que el color de la espora (P787) sea blanco (wdt:P787)
+- Que la forma de tapa de seta (P784) sea flat mushroom cup (Q19887957)
+- Que el caracter de la estirpe (P786) sea ring and volva stipe(Q19887987)
+- Que los accesorios del himenio (P785) sean free hymenium attachement(Q14544563)
+
+y me muestras su 
+- nombre
+- comestibilidad si tiene
+
+SELECT ?Agaricales ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?comestibilidad WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
+  ?Agaricales wdt:P789 ?comestibilidad.
+  ?Agaricales wdt:P18 ?imagen.
+  ?Agaricales wdt:P787 ?spore_print_color.
+  ?Agaricales wdt:P787 wd:Q23444.
+  ?Agaricales wdt:P784 ?mushroom_cap_shape.
+  ?Agaricales wdt:P784 wd:Q19887957.
+  ?Agaricales wdt:P786 ?car_cter_del_estipe.
+  ?Agaricales wdt:P786 wd:Q19887987.
+  ?Agaricales wdt:P785 ?accesorios_del_himenio.
+  ?Agaricales wdt:P785 wd:Q14544563.
+  
+  OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
+}
+
+CONSULTA QUE IDENTIFICA UNA SETA Y TE DA TODA SU INFORMACION UNA VEZ ENCONTRADA
+
+SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
+  ?Agaricales wdt:P789 ?comestibilidad.
+  ?Agaricales wdt:P18 ?imagen.
+
+  ?Agaricales wdt:P787 ?spore_print_color.
+  ?Agaricales wdt:P787 wd:Q23444.
+  ?Agaricales wdt:P784 ?mushroom_cap_shape.
+  ?Agaricales wdt:P784 wd:Q19887957.
+  ?Agaricales wdt:P786 ?car_cter_del_estipe.
+  ?Agaricales wdt:P786 wd:Q19887987.
+  ?Agaricales wdt:P785 ?accesorios_del_himenio.
+  ?Agaricales wdt:P785 wd:Q14544563.
+  OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
+}
+
+Si no pone parametro
+no se mete en el filtro
+
+Despliegue de opciones:
+- Comestibilidad(P789)
+
+(se les puede sacar el icono)
+
+edible mushroom (Q654236)- comestible
+inedible mushroom (Q4317894)-no comestible
+caution mushroom (Q19888537)- precaución
+psychoactive mushroom (Q1169875)-psicoactiva
+poisonous mushroom (Q19888562) - venenosa
+allergenic mushroom (Q19888579) - alérgico
+deadly mushroom (Q19888591) - mortal
+
+- Color de la espora (P787)
+black (Q23445) - negro
+brown (Q47071)-marron
+cream (Q2730433) - crema
+green (Q3133) - verde
+ochre (Q194191) - ocre
+olive (Q864152)- aceituna
+pink (Q429220) - rosa
+purple (Q3257809) -violeta
+salmon (Q2015138)-salmon
+tan (Q1670336)- bronceado
+white (Q23444) - blanco
+yellow (Q943) - amarillo
+
+- Mushroom_cap_shape.(P784)
+(sacar iconos)
+
+campanulate mushroom cap (Q19887953) - gorro de champiñón campanulado
+
+
+
+
+
