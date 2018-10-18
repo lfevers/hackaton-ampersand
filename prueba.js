@@ -66,7 +66,8 @@ function prueba(){
   ?Agaricales wdt:P787 wd:` + color + `.
   
   ?Agaricales wdt:P784 ?mushroom_cap_shape.
-  ?Agaricales wdt:P784 wd:` + shape + `.
+  ?Agaricales wdt:P784 wd:` + shape + `.++
+  
  
   OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
 }
