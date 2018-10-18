@@ -49,15 +49,30 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 
 
 function prueba(){
-const endpointUrl = 'https://query.wikidata.org/sparql',
-      sparqlQuery = `SELECT ?Agaricales ?AgaricalesLabel ?comestibilidad ?comestibilidadLabel ?imagen WHERE {
+
+	var color = document.getElementById("color").value;
+	var consulta = `SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
   ?Agaricales wdt:P789 ?comestibilidad.
   ?Agaricales wdt:P18 ?imagen.
+
+  ?Agaricales wdt:P787 ?spore_print_color.
+  ?Agaricales wdt:P787 wd:` + color + `.
+  ?Agaricales wdt:P784 ?mushroom_cap_shape.
+  ?Agaricales wdt:P784 wd:Q19887957.
+  ?Agaricales wdt:P786 ?car_cter_del_estipe.
+  ?Agaricales wdt:P786 wd:Q19887987.
+  ?Agaricales wdt:P785 ?accesorios_del_himenio.
+  ?Agaricales wdt:P785 wd:Q14544563.
+  
+  OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
 }
-LIMIT 5
-`,
+`;
+
+
+const endpointUrl = 'https://query.wikidata.org/sparql',
+      sparqlQuery = consulta ,
       fullUrl = endpointUrl + '?query=' + encodeURIComponent( sparqlQuery ),
       headers = { 'Accept': 'application/sparql-results+json' };
 
@@ -68,11 +83,12 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
     
     var html = "";
     for ( const result of results.bindings ) {
-
+    	//MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
     	html += 
     	'<article>' +
-    	'<p>' + result.AgaricalesLabel.value + '</p>' +
+    	'<h3>' + result.AgaricalesLabel.value + '</h3>' +
     	'<img src=' + JSON.stringify(result.imagen.value) + ' width="50" alt="asdf"></img>' +
+    	'<p> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</p>' + 
     	'</article>'
 
     }
