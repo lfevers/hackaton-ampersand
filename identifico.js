@@ -83,7 +83,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        comestibilidad= "Q19888591.png";
 			        break;	
 			    default:
-			        comestibilidad= "Q19888591.png";
+			        comestibilidad= "no.png";
 			        break;  
 				}
 			}	
@@ -130,7 +130,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        cap= "Q23058598.png";
 			        break;			
 			    default:
-			        cap= "Q23058598.png";
+			        cap= "no.png";
 			        break;  
 				}
 			}	
@@ -157,7 +157,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        tipo_h= "Q2034230.png";
 			        break;
 			    default:
-			        tipo_h= "Q2034230.png";
+			        tipo_h= "no.png";
 			        break;  
 				}
 			}
@@ -195,7 +195,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        accesorio_himen= "Q19887932.png";
 			        break;
 			    default:
-			        accesorio_himen= "Q19887932.png";
+			        accesorio_himen= "no.png";
 			        break;  
 				}
 			}			
@@ -219,7 +219,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        caracter= "Q19887988.png";
 			        break;
 			    default:
-			        caracter= "Q19887988.png";
+			        caracter= "no.png";
 			        break;  
 			}
 
@@ -229,43 +229,43 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			if( result.spore_print_colorLabel != undefined){
 				switch(result.spore_print_colorLabel.value) {
 			    case "black":
-			        color_e= "Q23445.png";
+			        color_e= "negro.png";
 			        break;
 			    case "brown":
-			        color_e= "Q47071.png";
+			        color_e= "marron.png";
 			        break;
 			    case "cream ":
-			        color_e= "Q2730433.png";
+			        color_e= "crema.png";
 			        break;
 			    case "green":
-			        color_e= "Q3133.png";
+			        color_e= "verde.png";
 			        break;
 			    case "ochre":
-			        color_e= "Q194191.png";
+			        color_e= "ocre.png";
 			        break;
 			    case "olive":
-			        color_e= "Q864152.png";
+			        color_e= "oliva.png";
 			        break;
 			    case "pink":
-			        color_e= "Q429220.png";
+			        color_e= "rosa.png";
 			        break;
 			    case "purple":
-			        color_e= "Q3257809.png";
+			        color_e= "violeta.png";
 			        break;
 			    case "salmon":
-			        color_e= "Q2015138.png";
+			        color_e= "salmon.png";
 			        break;
 			    case "tan":
-			        color_e= "Q1670336.png";
+			        color_e= "bronceado.png";
 			        break;
 			    case "white":
-			        color_e= "Q23444.png";
+			        color_e= "blanco.png";
 			        break;
 			    case "yellow":
-			        color_e= "Q943.png";
+			        color_e= "amarillo.png";
 			        break;
 			    default:
-			        color_e= "Q23444.png";
+			        color_e= "no.png";
 			        break;  
 			}
 			}
