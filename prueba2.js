@@ -94,13 +94,25 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
           '<article>' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
 
-          `<button onclick="prueba('`+objetoQ+`');"> `+ result.AgaricalesLabel.value +`</button>`+
-          '</article>'
+          '</article>'+
+          `
+          <div class="seta-class" onclick="prueba('`+objetoQ+`');">
+              
+              <div class="texto">
+                <p class="name-subclass">`+result.AgaricalesLabel.value+ `</p>
+              </div>
+            </div>
+            
+          `
+
+
+
         }
 
         document.getElementById("resultados").innerHTML = html;
         }else{
           console.log("ULTIMA" + n); // EN N ESTA ALMACENADA LA Q DE LA SETA QUE HAY QUE MOSTRAR
+          window.location.href= "identificar.html&"+n;
         }
     
 
