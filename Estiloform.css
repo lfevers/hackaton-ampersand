@@ -1,7 +1,4 @@
-body{
-    background-color: grey;
-    padding: 0%;
-}
+
 
 div.cajalogo{
     
@@ -13,11 +10,9 @@ div.main   {
     display:flex;
     justify-content: center;
     flex-direction: column;
-    padding: 50px;
 }
 
 div.color{
-    background-color: red;
     display: flex;
     justify-content: center;
     margin: 30px;
@@ -40,13 +35,15 @@ div.color > select{
 }
 
 div.imagenforma, div.imagenestirpe, div.accesoriohimenio, div.tipohimenio{
-    background-color: whitesmoke;
+    background-color: #9CCC65;
     display:flex;
     justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
-    border-radius: 30px;
     
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
 }
 
 
@@ -107,9 +104,37 @@ p{
 
 
 .botonfin{
-    margin-top: 30px;
-    border-radius: 20px;
+    width: 300px !important;
+    background-color: #333333;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    font-size: 1.25em;
 }
 
 /*-----------------------------------------*/
 
+.results{
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 20px;
+
+    background-color: #9CCC65;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+    text-align: center;
+}
+
+.comestibilidad{
+    padding-top: 10px;
+    font-weight: bold;
+}
