@@ -1,0 +1,19 @@
+Encontrar la informacion de una seta a partir de su nombre
+
+Poner aqui como encontrar la que buscas
+?Agaricales wdt:P171* wd:Q27720.
+
+
+SELECT ?AgaricalesLabel ?imagen ?comestibilidadLabel ?mushroom_cap_shapeLabel ?tipo_de_himenioLabel ?accesorios_del_himenioLabel 
+ ?car_cter_del_estipeLabel ?spore_print_colorLabel    WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?Agaricales wdt:P171* wd:Q27720.
+  ?Agaricales wdt:P789 ?comestibilidad.
+  ?Agaricales wdt:P18 ?imagen.
+  ?Agaricales wdt:P787 ?spore_print_color.
+  ?Agaricales wdt:P784 ?mushroom_cap_shape.
+  ?Agaricales wdt:P786 ?car_cter_del_estipe.
+  ?Agaricales wdt:P785 ?accesorios_del_himenio.
+  ?Agaricales wdt:P783 ?tipo_de_himenio
+}
+
