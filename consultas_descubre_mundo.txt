@@ -1,0 +1,11 @@
+A PARTIR DE AQUI --> Agaricomycetidae (Q131868)
+
+Cuando buscas un nivel inferior cambiar la Q y volver ab uscar hasta que ya no de resultados(esa es la seta)
+
+
+SELECT DISTINCT ?Agaricales ?AgaricalesLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  ?Agaricales wdt:P171 wd:Q131868.
+  ?_Agaricales wdt:P171* ?Agaricales.
+  ?_Agaricales wdt:P789 ?comestibilidad.
+}
