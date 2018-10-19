@@ -3,11 +3,26 @@
 <head>
 	<script src="prueba.js"></script>
 	<title>PRUEBA</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="Estiloform.css" />
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800,900" rel="stylesheet">
 </head>
 <body>
-	<div>
-		<h1>Buscador de setas por color de esporas</h1>	
-		<select id="color">
+	<div class="imageninicio">
+			<img src="../hackaton-ampersand/imagenes/LOGOTYPE.png" width="200" alt="">	
+	</div>
+
+
+	<div class="main">
+		
+			<div id="caja-titulo" >
+					<h1>FILTRO MUSHPICK</h1>
+			</div>
+			<br>
+
+		<div class="selector">
+		<p>Color Himenio</p>
+		
+		<select >
 			<option value="Q23444">Blanco</option>
  			<option value="Q23445">Negro</option>
   			<option value="Q47071">Marron</option>
@@ -21,23 +36,27 @@
   			<option value="Q23445">Bronceado</option>
   			<option value="Q943">Amarillo</option>
 		</select>
-
-		<br>
-
-		<label for="hongo-conico"><img src="img/Q19887954.png" width="80"></label>
-		<label for="hongo-convexo"><img src="img/Q14544535.png" width="80"></label>
-		<label for="seta-deprimida"><img src="img/Q19887955.png" width="80"></label>
-		<label for="plana-setas"><img src="img/Q19887957.png" width="80"></label>
-		<label for="infundi"><img src="img/Q19887958.png" width="80"></label>
-		<label for="seta-offset"><img src="img/Q14544541.png" width="80"></label>
-		<label for="seta-ovada"><img src="img/Q19887961.png" width="80"></label>
-		<label for="tapa-hongo"><img src="img/Q19887964.png" width="80"></label>
-		<label for="sin-tapa"><img src="img/Q19887965.png" width="80"></label>
-		<label for="concavo-plano"><img src="img/Q23058598.png" width="80"></label>
+		</div>
 
 
 		<br>
 
+	<div class="labels">
+			<p>Forma de la copa</p>
+		<label for="hongo-conico"><img src="img/Q19887954.png" ></label>
+		<label for="hongo-convexo"><img src="img/Q14544535.png" ></label>
+		<label for="seta-deprimida"><img src="img/Q19887955.png" ></label>
+		<label for="plana-setas"><img src="img/Q19887957.png" ></label>
+		<label for="infundi"><img src="img/Q19887958.png" ></label>
+		<label for="seta-offset"><img src="img/Q14544541.png" ></label>
+		<label for="seta-ovada"><img src="img/Q19887961.png" ></label>
+		<label for="tapa-hongo"><img src="img/Q19887964.png" ></label>
+		<label for="sin-tapa"><img src="img/Q19887965.png" ></label>
+		<label for="concavo-plano"><img src="img/Q23058598.png" ></label>
+	</div>
+
+		<br>
+	<div class="radiobuttons">
 		<input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" checked> 	Tapa de hongo cónico</input>
 		<br>
   		<input id="hongo-convexo" type="radio" name="shape" 	value="Q14544535" 	> 		Tapa de hongo convexo</input>
@@ -57,7 +76,7 @@
   		<input id="sin-tapa" type="radio" name="shape" 			value="Q19887965" 	> 		Sin tapa de seta</input>
   		<br>
   		<input id="concavo-plano" type="radio" name="shape" 	value="Q23058598" 	> 		Cóncavo al plano</input>
-  		
+	</div>
 
 
 		<!--

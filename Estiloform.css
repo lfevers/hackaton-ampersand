@@ -1,0 +1,75 @@
+body{
+    margin: 0px;
+    background-color: whitesmoke;
+    
+}
+
+p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+div.imageninicio{
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 2px 3px gray;
+
+}
+
+div.main{
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 900;
+}
+
+#caja-titulo{
+   
+}
+
+select #color{
+    background-color: grey;
+}
+
+div.labels > label > img{
+    width: 100px;
+    margin: 10px;
+    border-radius: 80px;
+    
+}
+
+div.labels > label > img:hover{
+    width: 100px;
+    margin: 10px;
+    background-color: grey;
+    border-radius: 80px;
+    
+}
+
+
+div.selector{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+select{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; 
+}
+
+
+
+
+/*-----------------------------------------*/
