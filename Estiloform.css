@@ -1,75 +1,115 @@
 body{
-    margin: 0px;
-    background-color: whitesmoke;
+    background-color: grey;
+    padding: 0%;
+}
+
+div.cajalogo{
     
+    padding: 40px;
+}
+
+div.main   {
+
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+
+div.color{
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    margin: 30px;
+    border-radius: 100px;
+
+}
+
+
+label.deseleccionado{
+    background-color: blueviolet;
+    border-radius: 100px;
+}
+
+.borderBottom{
+    border-bottom: 1px solid #7f7f7f;
+}
+
+div.color > select{
+    width: 900px;
+}
+
+div.imagenforma, div.imagenestirpe, div.accesoriohimenio, div.tipohimenio{
+    background-color: whitesmoke;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    border-radius: 30px;
+    
+}
+
+
+div.imagenforma > label > img{
+    margin: 30px;
+    border-radius: 100px;
+}
+
+
+
+
+div.imagenestirpe > label > img{
+    margin: 30px;
+}
+
+
+
+div.accesoriohimenio > label > img{
+    margin: 50px;
+}
+
+
+
+
+input{
+    
+    display: block;
+}
+
+div.labelconinput{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-style: solid;
+    margin: 10px;
+}
+
+
+div.titulo{
+    display: flex;
+    justify-content: center;
+}
+
+div.textocopa{
+    justify-content: center;
+    display: flex;
 }
 
 p{
+    font-size: 20px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    font-weight: 800;
 }
 
-div.imageninicio{
-    padding: 40px;
-    margin-bottom: 40px;
-    box-shadow: 0 4px 2px 3px gray;
-
-}
-
-div.main{
-    background-color: red;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 150px;
-    padding-right: 150px;
+.ocultos{
+    display: none;
 }
 
 
-h1{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 900;
-}
-
-#caja-titulo{
-   
-}
-
-select #color{
-    background-color: grey;
-}
-
-div.labels > label > img{
-    width: 100px;
-    margin: 10px;
-    border-radius: 80px;
-    
-}
-
-div.labels > label > img:hover{
-    width: 100px;
-    margin: 10px;
-    background-color: grey;
-    border-radius: 80px;
-    
-}
-
-
-div.selector{
+.botonfin{
     margin-top: 30px;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-
+    border-radius: 20px;
 }
-
-select{
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500; 
-}
-
-
-
 
 /*-----------------------------------------*/
+
