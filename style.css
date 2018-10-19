@@ -118,10 +118,30 @@ p {
     align-content: center;
 }
 
+.imagen3 {
+    display: flex;
+    align-self: center;
+}
+
+.imagen4 {
+    max-width: 70%;
+}
+
+.image5 {
+    width: 350px;
+    height: 350px;
+    border-radius: 20px;
+    margin: 20px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    float: none;
+}
+
 .texto {
     display: flex;
     align-items: center;
     padding-left: 40px;
+    flex-direction: column;
 }
 
 .logo {
@@ -151,3 +171,76 @@ p {
     color: #8BC34A;
     cursor: pointer;
 }
+/* ------------------------------------------------ */
+.informacion {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 20px;
+
+    background-color: #9CCC65;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+}
+
+.nombre {
+    margin: 0;
+}
+
+/* ------------------------------------------------ */
+
+.tarjeta {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 20px;
+    width: 200px;
+
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+}
+
+.tarjetas-juntas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.centrar {
+    text-align: center;
+}
+
+/*
+.informacion {
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    margin-top: 18px;
+    padding: 20px;
+
+    background-color: #9CCC65;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: 2%;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: row;
+}
+
+.nombre {
+    margin: 0;
+}
+*/
