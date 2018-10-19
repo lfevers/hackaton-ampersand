@@ -95,15 +95,15 @@ function busqueda(){
       for ( const result of results.bindings ) {
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
-          '<article>' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
+          '<div class="results" id="resultados">' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
           '<h3>' + result.AgaricalesLabel.value + '</h3>' + 
-          '<img src=' + JSON.stringify(result.imagen.value) + ' width="50" alt="asdf"></img>' +
-          '<p> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</p>' + 
-          '</article>'
+          '<img class="img-class" src=' + JSON.stringify(result.imagen.value) + ' width="100" alt="asdf"></img>' +
+          '<span class="comestibilidad"> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' + 
+          '</div>'
   
       }
   
-      document.getElementById("resultados").innerHTML = html;
+      document.getElementById("resultados2").innerHTML = html;
   
   } );
   

@@ -4,35 +4,62 @@
 	<script src="Formulario.js"></script>
 	<title>Formulario</title>
 	<link rel="stylesheet" type="text/css" media="screen" href="Estiloform.css" />
+    <link rel="stylesheet" type="text/css" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800,900" rel="stylesheet">
-    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="cajalogo">
-        <img src="../hackaton-ampersand/imagenes/LOGOTYPE.png" width="300" alt="">
-    </div>
+    <nav>
+        <div class="imagen">
+            <a href="Formulario.html"><img src="logo.png" class="logo" alt="logo" ></a>
+        </div>
+        <div class="buscador">
+            <form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+                <input type="text" placeholder="Buscar por nombre..." name="search2">
+                <a href="amanita.html"><button type="button" ><i class="fa fa-search"></i></button></a>
+            </form>
+        </div>
+    </nav>
+    <main>
+        <div class="upper-buttons">
+                <a class="button" href="Formulario.html">Identificar seta</a>
+                <a class="button" href="index.html">Listado</a>     
+            </div>
+
+            <div class="categoria"> 
+                    <div id="resultados">           
+                    </div>
+                                            
+            </div>
+    </main>
     <div class="main">
         <div class="titulo">
-            <p>Buscador de setas por color de esporas</p>
+            <p>Identificador de setas</p>
+        </div>
+
+        <div class="textocopa">
+                <p>Selector de color</p>
         </div>
         <!-- SELECTOR DE COLOR-->
         
-        <div class="color">
-            <select id="color">
-                <option value="">-Selecciona Color-</option>
-                <option value="Q23444">Blanco</option>
-                <option value="Q23445">Negro</option>
-                <option value="Q47071">Marron</option>
-                <option value="Q2730433">Crema</option>
-                <option value="Q3133">Verde</option>
-                <option value="Q194191">Ocre</option>
-                <option value="Q864152">Aceituna</option>
-                <option value="Q429220">Rosa</option>
-                <option value="Q3257809">Violeta</option>
-                <option value="Q2015138">Salmon</option>
-                <option value="Q23445">Bronceado</option>
-                <option value="Q943">Amarillo</option>
-            </select>
+        <div class="informacion" id="resultados">
+            <div class="color">
+                <select id="color">
+                    <option value="">-Selecciona Color-</option>
+                    <option value="Q23444">Blanco</option>
+                    <option value="Q23445">Negro</option>
+                    <option value="Q47071">Marron</option>
+                    <option value="Q2730433">Crema</option>
+                    <option value="Q3133">Verde</option>
+                    <option value="Q194191">Ocre</option>
+                    <option value="Q864152">Aceituna</option>
+                    <option value="Q429220">Rosa</option>
+                    <option value="Q3257809">Violeta</option>
+                    <option value="Q2015138">Salmon</option>
+                    <option value="Q23445">Bronceado</option>
+                    <option value="Q943">Amarillo</option>
+                </select>
+            </div>
         </div>
 
         <div class="textocopa">
@@ -255,7 +282,7 @@
 		<button class="botonfin" onclick="busqueda();">Buscar</button>
 	
 	
-	<div id="resultados"> 
+	<div id="resultados2" class="resultados2"> 
 		
     </div>
 

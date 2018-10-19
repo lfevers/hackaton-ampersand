@@ -29,7 +29,7 @@ body, button {
 main {
     margin-top: 58px;
     padding-top: 17px;
-    margin-bottom: 50px;
+    /*margin-bottom: 50px;*/
 }
 
 nav {
@@ -152,7 +152,7 @@ p {
     height: 3em;
     padding-left: 10%;
 }
-
+/**/
 .categoria {
     padding: 2%;
 }
