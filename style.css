@@ -270,6 +270,10 @@ form.example button:hover {
     color: #8BC34A;
 }
 
+button {
+    width: 40px !important;
+}
+
 @media screen and (max-width: 500px) {
     /* SI baja de width 500px: */
     nav {
