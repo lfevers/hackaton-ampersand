@@ -54,7 +54,7 @@ function split(texto){
   return result;
 }
 
-function prueba(n, a){
+function prueba(n, a,name){
   console.log(n + " ,  " + a);
   a=n;
   // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
@@ -76,7 +76,6 @@ const endpointUrl = 'https://query.wikidata.org/sparql',
 
 fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
     const { head: { vars }, results } = json;
-
     //...AQUI NO SE TOCA
     console.log(results.bindings); //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
     //RESULT BINDINGS ES EL VECTOR CON TODOS LOS RESULTADOS
@@ -86,10 +85,11 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
         //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
         for ( const result of results.bindings ) {
           var Q=result.Agaricales.value;
-
+          console.log("EL NOMBRE: " + result.AgaricalesLabel.value);
+          name = result.AgaricalesLabel.value;
           console.log(Q);
           var objetoQ = split(Q);
-          console.log(objetoQ);
+          console.log("OBJETOQ: " + objetoQ);
 
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
@@ -97,7 +97,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 
           '</article>'+
           `
-          <div class="seta-class" onclick="prueba('`+objetoQ+`' ,  '`+a+`' );">
+          <div class="seta-class" onclick="prueba('`+objetoQ+`' ,  '`+a+`' ,'`+name+`');">
               
               <div class="texto">
                 <p class="name-subclass">`+result.AgaricalesLabel.value+ `</p>
@@ -113,8 +113,8 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
         document.getElementById("resultados").innerHTML = html;
         }else{
           console.log("ULTIMA" + n); // EN N ESTA ALMACENADA LA Q DE LA SETA QUE HAY QUE MOSTRAR
-          window.location.href= "identificar.html&"+n;
-        }
+          window.location.href= "identificar.html?Q="+n+"&name=" + name;
+        } //+"name="+nombre
     
 
 } );
