@@ -5,20 +5,27 @@
 		<title>MushPick</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<script type="text/javascript" src="prueba2.js"></script>
 	</head>
 
 	<body>
 		<nav>
 			<div class="imagen">
-				<img src="logo.png" class="logo" alt="logo">
+				<a href="identificar.html"><img src="logo.png" class="logo" alt="logo" ></a>
+			</div>
+			<div class="buscador">
+				<form class="example" action="/action_page.php" style="margin:auto;max-width:300px">
+					<input type="text" placeholder="Buscar por nombre..." name="search2">
+					<button type="submit"><i class="fa fa-search"></i></button>
+				</form>
 			</div>
 		</nav>
 
 		<main>
 			<div class="upper-buttons">
-				<button class="button">Información</button>
-				<button class="button">Identificar</button>
+				<a class="button" href="identificar.html">Identificar</a>
+				<a class="button" href="index.html">Información</a>				
 			</div>
 
 			<div class="categoria">	
@@ -27,7 +34,7 @@
 											
 			</div>
 		</main>
-		<script type="text/javascript"> prueba('Q131868');</script>
+		<script type="text/javascript"> prueba('Q131868', '0');</script>
 	</body>
 
 	<footer>&copy; 2018 Ampersand</footer>
