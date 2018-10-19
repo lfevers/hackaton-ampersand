@@ -1,4 +1,11 @@
+.enlace_seta{
+    text-decoration: none;
+    color: black;
+}
 
+.enlace_seta:hover{
+    color: #f7f7f7;
+}
 
 div.cajalogo{
     

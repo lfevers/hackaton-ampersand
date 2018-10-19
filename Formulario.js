@@ -1,3 +1,10 @@
+function split(texto){
+  // HACE SPLIT EN LA RUTA Y COGE LA ULTIMA PALABRA SEPARADA POR EL CARACTER / --> Q12345
+  var pieces = texto.split(/[/]+/);
+  var result = pieces[pieces.length-1];
+  return result;
+}
+
 function busqueda(){
 
 
@@ -57,7 +64,7 @@ function busqueda(){
   
     // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
     //ESO LO MIRAIS CON CLAUDIA
-      var consulta = `SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
+      var consulta = `SELECT ?Agaricales ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
     SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
     ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
   
@@ -93,10 +100,15 @@ function busqueda(){
       var html = "";
       //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
       for ( const result of results.bindings ) {
+        console.log(result);
+
+          var id = result.Agaricales.value;
+          var id2 = split(id);
+          console.log("ID: " + id2);
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
           '<div class="results" id="resultados">' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
-          '<h3>' + result.AgaricalesLabel.value + '</h3>' + 
+          '<a class="enlace_seta" href="identificar.html?Q='+ id2 +'&name='+ result.AgaricalesLabel.value +'"><h3>' + result.AgaricalesLabel.value + '</h3></a>' + 
           '<img class="img-class" src=' + JSON.stringify(result.imagen.value) + ' width="100" alt="asdf"></img>' +
           '<span class="comestibilidad"> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' + 
           '</div>'
