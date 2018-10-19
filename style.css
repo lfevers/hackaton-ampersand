@@ -39,9 +39,11 @@ nav {
     width: 100%;
     display: flex;
     align-content: center;
+    justify-content: space-between;
     height: 75px;
     width: 100%;
     background-color: #9CCC65;
+    flex-wrap: wrap;
 }
 
 footer {
@@ -95,7 +97,9 @@ p {
     display: flex;
     border-radius: 10px;
     margin-top: 18px;
+    /*
     padding: 20px;
+    */
 
     background-color: #9CCC65;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -145,8 +149,8 @@ p {
 }
 
 .logo {
-    height: 4em;
-    padding-left: 40%;
+    height: 3em;
+    padding-left: 10%;
 }
 
 .categoria {
@@ -219,6 +223,74 @@ p {
 
 .centrar {
     text-align: center;
+}
+
+
+form.example input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+    border-radius: 10px 0 0 10px;
+}
+
+form.example button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #333333;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+form.example::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.example {
+    display: flex;
+}
+
+.buscador {
+    display: flex;
+    align-content: center;
+    margin-right: 20px;
+
+}
+
+form.example button:hover {
+    color: #8BC34A;
+}
+
+@media screen and (max-width: 500px) {
+    /* SI baja de width 500px: */
+    nav {
+        height: 100px;
+        justify-content: center;
+        padding: 10px 0 10px 0;
+    }
+
+    .upper-buttons {
+        margin-top: 45px !important;
+    }
+
+    .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+        padding-left: 0 !important;
+    }
+
+    .buscador {
+        margin-right: 0 !important;
+    }
 }
 
 /*

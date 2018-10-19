@@ -54,8 +54,9 @@ function split(texto){
   return result;
 }
 
-function prueba(n){
-
+function prueba(n, a){
+  console.log(n + " ,  " + a);
+  a=n;
   // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
   //ESO LO MIRAIS CON CLAUDIA
 	var consulta = `SELECT DISTINCT ?Agaricales ?AgaricalesLabel WHERE {
@@ -96,7 +97,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 
           '</article>'+
           `
-          <div class="seta-class" onclick="prueba('`+objetoQ+`');">
+          <div class="seta-class" onclick="prueba('`+objetoQ+`' ,  '`+a+`' );">
               
               <div class="texto">
                 <p class="name-subclass">`+result.AgaricalesLabel.value+ `</p>
