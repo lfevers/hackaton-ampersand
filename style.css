@@ -93,8 +93,11 @@ p {
 }
 
 .ayuda {
+    float: left;
     display: flex;
     flex-direction: row;
+    width: 60px;
+    padding: 1.5%;
 }
 
 .seta-class, .seta-subclass {
