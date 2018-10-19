@@ -47,32 +47,63 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 
 }
 
-
+//?Agaricales wdt:P784 ?mushroom_cap_shape.
+  //?Agaricales wdt:P784 wd:` + shape +`.
 function prueba(){
 
-	var color = document.getElementById("color").value;
+
+  //FORMULARIO
+  // - COLOR
+	var color = document.getElementById("color").value; //COJO EL COLOR DEL SELECTOR
+
+  if (color != '') { // SI NO HE ESCOGIDO COLOR NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
+    color =           // Y LO AÑADO LUEGO A CONSULTA
+      `?Agaricales wdt:P787 ?spore_print_color.
+      ?Agaricales wdt:P787 wd:` + color + `.` ;
+  }
+
+
+  // - FORMA
   var shape= document.querySelector('input[name="shape"]:checked').value;
 
-  console.log("FORMA: " + shape);
+  if (shape != '') {// SI NO HE ESCOGIDO FORMA NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
+    shape =               // Y LO AÑADO LUEGO A CONSULTA
+      `?Agaricales wdt:P784 ?mushroom_cap_shape.
+      ?Agaricales wdt:P784 wd:` + shape + `.`;
+  }
+
+  // - ESTIRPE
+
+  var estirpe= document.querySelector('input[name="estirpe"]:checked').value;
+  console.log("value estirpe: " + estirpe);
+
+  if (estirpe != '') {// SI NO HE ESCOGIDO FORMA NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
+    estirpe =               // Y LO AÑADO LUEGO A CONSULTA
+      `?Agaricales wdt:P786 ?car_cter_del_estipe.
+      ?Agaricales wdt:P786 wd:` + estirpe + `.`;
+  }
+
+
 
   // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
   //ESO LO MIRAIS CON CLAUDIA
 	var consulta = `SELECT ?AgaricalesLabel ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   ?Agaricales (wdt:P171/wdt:P171/wdt:P171/wdt:P171/wdt:P171) wd:Q27720.
+
   ?Agaricales wdt:P789 ?comestibilidad.
   ?Agaricales wdt:P18 ?imagen.
 
-  ?Agaricales wdt:P787 ?spore_print_color.
-  ?Agaricales wdt:P787 wd:` + color + `.
-  
-  ?Agaricales wdt:P784 ?mushroom_cap_shape.
-  ?Agaricales wdt:P784 wd:` + shape +`.
+  `+ color + `  
+  `+ shape + `
+  `+ estirpe + ` 
  
   OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
+
 }
 `;
 
+console.log("CONSULTA: " + consulta);
 //DESDE AQUI HASTA ....
 const endpointUrl = 'https://query.wikidata.org/sparql',
       sparqlQuery = consulta ,
