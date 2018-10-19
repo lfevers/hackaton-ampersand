@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="Formulario.js"></script>
+	<title>Formulario</title>
+	<link rel="stylesheet" type="text/css" media="screen" href="Estiloform.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,800,900" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="cajalogo">
+        <img src="../hackaton-ampersand/imagenes/LOGOTYPE.png" width="300" alt="">
+    </div>
+    <div class="main">
+        <div class="titulo">
+            <p>Buscador de setas por color de esporas</p>
+        </div>
+        <!-- SELECTOR DE COLOR-->
+        
+        <div class="color">
+            <select id="color">
+                <option value="">-Selecciona Color-</option>
+                <option value="Q23444">Blanco</option>
+                <option value="Q23445">Negro</option>
+                <option value="Q47071">Marron</option>
+                <option value="Q2730433">Crema</option>
+                <option value="Q3133">Verde</option>
+                <option value="Q194191">Ocre</option>
+                <option value="Q864152">Aceituna</option>
+                <option value="Q429220">Rosa</option>
+                <option value="Q3257809">Violeta</option>
+                <option value="Q2015138">Salmon</option>
+                <option value="Q23445">Bronceado</option>
+                <option value="Q943">Amarillo</option>
+            </select>
+        </div>
+
+        <div class="textocopa">
+                <p>Forma de la copa</p>
+        </div>
+
+        <div class="imagenforma">
+        <br>
+        
+        <!-- SELECTOR DE FORMA -->
+        <div class="labelconinput">
+            <label for="hongo-conico"><img src="img/Q19887954.png" width="80"></label>
+            <input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" 	> 		
+        </div>
+        <div class="labelconinput">
+            <label for="hongo-convexo"><img src="img/Q14544535.png" width="80"></label>
+            <input id="hongo-convexo" type="radio" name="shape" 	value="Q14544535" 	> 		
+        </div>
+        <div class="labelconinput">    
+            <label for="seta-deprimida"><img src="img/Q19887955.png" width="80"></label>
+            <input id="seta-deprimida" type="radio" name="shape" 	value="Q19887955" 	> 	
+        </div>
+        <div class="labelconinput">    
+            <label for="plana-setas"><img src="img/Q19887957.png" width="80"></label>
+            <input id="plana-setas" type="radio" name="shape" 		value="Q19887957" 	> 		
+        </div>    
+        <div class="labelconinput">  
+            <label for="infundi"><img src="img/Q19887958.png" width="80"></label>
+            <input id="infundi" type="radio" name="shape" 			value="Q19887958" 	>	
+        </div>    
+        <div class="labelconinput"> 
+            <label for="seta-offset"><img src="img/Q14544541.png" width="80"></label>
+            <input id="seta-offset" type="radio" name="shape" 		value="Q14544541" 	> 	
+        </div>   
+        <div class="labelconinput">
+            <label for="seta-ovada"><img src="img/Q19887961.png" width="80"></label>
+            <input id="seta-ovada" type="radio" name="shape" 		value="Q19887961" 	> 		
+        </div>   
+        <div class="labelconinput">   
+            <label for="tapa-hongo"><img src="img/Q19887964.png" width="80"></label>
+            <input id="tapa-hongo" type="radio" name="shape" 		value="Q19887964" 	> 		
+        </div>     
+        <div class="labelconinput">
+            <label for="sin-tapa"><img src="img/Q19887965.png" width="80"></label>
+            <input id="sin-tapa" type="radio" name="shape" 			value="Q19887965" 	> 		
+        </div>   
+        <div class="labelconinput">
+            <label for="concavo-plano"><img src="img/Q23058598.png" width="80"></label>
+            <input id="concavo-plano" type="radio" name="shape" 	value="Q23058598" 	> 		
+        </div>
+
+        </div>
+
+            <br>
+
+        <div class="inputs">
+            <input class="ocultos" id="no-forma" type="radio" name="shape"			value="" 		checked>  
+        </div>		
+
+          <!-- SELECTOR CARACTER DE LA ESTIRPE -->
+          <div class="textocopa">
+                <p>Caracter del estipe</p>
+        </div>
+        <div class="imagenestirpe">
+            <div class="labelconinput">
+                 <label for="estirpe-desnudo"><img src="img/Q14544581.png" width="80"></label>
+                <input id="estirpe-desnudo" type="radio" name="estirpe"		value="Q14544581" 	> 		
+           
+            </div>
+
+            <div class="labelconinput">
+                    <label for="anilla-anillo"><img src="img/Q14544582.png" width="80"></label>
+                    <input id="anilla-anillo" type="radio" name="estirpe" 		value="Q14544582" 	> 		
+            </div> 
+            
+            
+           
+            <div class="labelconinput">
+                    <label for="stipe-volva"><img src="img/Q19887985.png" width="80"></label>
+                    <input id="stipe-volva" type="radio" name="estirpe" 		value="Q19887985" 	> 		
+            </div> 
+            
+            
+            
+            <div class="labelconinput">
+                    <label for="anillo-stipe"><img src="img/Q19887987.png" width="80"></label>
+                    <input id="anillo-stipe" type="radio" name="estirpe" 		value="Q19887987" 	> 		
+            </div> 
+            
+            
+            
+            <div class="labelconinput">
+                    <label for="cortina-stipe"><img src="img/Q19887988.png" width="80"></label>
+                    <input id="cortina-stipe" type="radio" name="estirpe" 		value="Q19887988" 	> 		
+            </div> 
+            
+            
+        
+        </div>
+       
+        <div class="inputs">
+            
+            <input class="ocultos" id="no-estirpe" type="radio" name="estirpe"			value="" 		checked> 	
+  
+        </div>
+        
+
+          <!-- SELECTOR ACCESORIO HIMENIO -->
+
+          <div class="textocopa">
+                <p>Accesorio Himenio</p>
+        </div>
+          
+        <div class="accesoriohimenio">
+
+            <div class="labelconinput">
+                    <label for="adenato-himen"><img src="img/Q14544569.png" width="80"></label>
+                    <input id="adenato-himen" type="radio" name="himenio"		value="Q14544569" 	> 
+            </div>
+            	
+            
+            <div class="labelconinput">
+                    <label for="himenio-anexado"><img src="img/Q19887923.png" width="80"></label>
+                    <input id="himenio-anexado" type="radio" name="himenio" 	value="Q19887923" 	>
+            </div>
+             		
+            
+            <div class="labelconinput">
+                    <label for="himenio-decurrente"><img src="img/Q19887925.png" width="80"></label>
+                    <input id="himenio-decurrente" type="radio" name="himenio" 	value="Q19887925" 	> 
+            </div>
+            		
+           
+            <div class="labelconinput">
+                    <label for="himenio-emarginado"><img src="img/Q19887926.png" width="80"></label>
+                    <input id="himenio-emarginado" type="radio" name="himenio" 	value="Q19887926" 	> 
+            </div>
+            		
+            
+            <div class="labelconinput">
+                    <label for="himenio-libre"><img src="img/Q14544563.png" width="80"></label>
+                    <input id="himenio-libre" type="radio" name="himenio" 		value="Q14544563" 	> 
+            </div>
+            		
+            
+            <div class="labelconinput">
+                    <label for="himenio-secante"><img src="img/Q19887929.png" width="80"></label>
+                    <input id="himenio-secante" type="radio" name="himenio" 	value="Q19887929" 	>
+            </div>
+            		
+            
+            <div class="labelconinput">
+                    <label for="sinuato-himen"><img src="img/Q19887930.png" width="80"></label>
+                    <input id="sinuato-himen" type="radio" name="himenio" 		value="Q19887930" 	>
+            </div>
+             		
+            
+            <div class="labelconinput">
+                    <label for="subdecurrente"><img src="img/Q19887931.png" width="80"></label>
+                    <input id="subdecurrente" type="radio" name="himenio" 		value="Q19887931" 	> 
+            </div>
+            		
+            
+            <div class="labelconinput">
+                    <label for="sin-himenio"><img src="img/Q19887932.png" width="80"></label>
+                    <input id="sin-himenio" type="radio" name="himenio" 		value="Q19887932" 	> 
+            </div>
+            		
+
+
+
+           
+            <input class="ocultos" id="no-himenio" type="radio" name="himenio"			value="" 		checked>
+      
+        </div>
+
+        <div class="textocopa">
+                <p>Tipo de Himenio</p>
+        </div>
+
+  		<!-- SELECTOR TIPO HIMENIO -->
+        <div class="tipohimenio">
+
+                <div class="labelconinput">
+		<label for="laminas"><img src="img/Q269345.png" width="80"></label>
+		<input id="laminas" type="radio" name="t-himenio"		value="Q269345" 	>
+    </div>
+    <div class="labelconinput">
+        
+        <label for="poros"><img src="img/Q19861549.png" width="80"></label>
+		<input id="poros" type="radio" name="t-himenio" 		value="Q19861549" 	>
+    </div>
+    <div class="labelconinput">
+        
+        <label for="liso"><img src="img/Q19861550.png" width="80"></label>
+  		<input id="liso" type="radio" name="t-himenio" 			value="Q19861550" 	> 	
+    </div>
+    <div class="labelconinput">
+        
+        <label for="crestas"><img src="img/Q19861551.png" width="80"></label>
+  		<input id="crestas" type="radio" name="t-himenio" 		value="Q19861551" 	>
+    </div>
+    <div class="labelconinput">
+        
+        <label for="dientes"><img src="img/Q19861552.png" width="80"></label>
+  		<input id="dientes" type="radio" name="t-himenio" 		value="Q19861552" 	> 		
+    </div>
+    <div class="labelconinput">
+        
+        <label for="carnosa"><img src="img/Q2034230.png" width="80"></label>
+  		<input id="carnosa" type="radio" name="t-himenio" 		value="Q2034230" 	>		
+    </div>
+		<br>
+        <div class="inputs">
+		<input class="ocultos" id="no-t-himenio" type="radio" name="t-himenio"	value="" 		checked>
+        </div>
+          
+        </div>
+		
+		<button class="botonfin" onclick="busqueda();">Buscar</button>
+	
+	
+	<div id="resultados"> 
+		
+    </div>
+
+
+</body>
+</html>

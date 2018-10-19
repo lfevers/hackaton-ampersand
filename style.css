@@ -92,6 +92,11 @@ p {
     align-self: center;
 }
 
+.ayuda {
+    display: flex;
+    flex-direction: row;
+}
+
 .seta-class, .seta-subclass {
     /* height: 2em; */
     display: flex;
@@ -272,6 +277,10 @@ form.example button:hover {
 
 button {
     width: 40px !important;
+}
+
+.padd {
+    padding-left: 20px;
 }
 
 @media screen and (max-width: 500px) {
