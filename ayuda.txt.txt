@@ -1,0 +1,50 @@
+<h1>Ayuda</h1>
+	<h2>Forma del sombrero</h2>
+	<img src="img/Q19887953.png"><h3>Gorro de champiñón campanulado</h3>
+	<img src="img/Q19887954.png"><h3>Tapa de hongo cónico</h3>
+	<img src="img/Q14544535.png"><h3>Tapa de hongo convexo</h3>
+	<img src="img/Q19887955.png"><h3>Tapa de seta deprimida</h3>
+	<img src="img/Q19887957.png"><h3>Tapa plana de setas</h3>
+	<img src="img/Q19887958.png"><h3>Tapa de seta infundibuliforme</h3>
+	<img src="img/Q14544541.png"><h3>Tapa de seta offset</h3>
+	<img src="img/Q19887961.png"><h3>Tapa de seta ovada</h3>
+	<img src="img/Q19887962.png"><h3>Tapa de seta umbilicato </h3>
+	<img src="img/Q19887964.png"><h3>Tapa de hongo</h3>
+	<img src="img/Q19887965.png"><h3>Sin tapa de seta</h3>
+	<img src="img/Q23058598.png"><h3>Cóncavo al plano </h3>
+
+	<h2>Carácter de la estirpe</h2>
+	<img src="img/Q14544581.png"><h3>Estípe desnudo</h3>
+	<img src="img/Q14544582.png"><h3>Estipe con anillo</h3>
+	<img src="img/Q19887985.png"><h3>Estipe volva</h3>
+	<img src="img/Q19887987.png"><h3>Estipe con anillo y volva</h3>
+	<img src="img/Q19887988.png"><h3>Estipe de cortina</h3>
+
+	<h2>Accesorios del himenio</h2>
+	<img src="img/Q14544569.png"><h3>Adenato de himen adjunto</h3>
+	<img src="img/Q19887923.png"><h3>Adjunto de himenio anexado</h3>
+	<img src="img/Q19887925.png"><h3>Fijación de himenio decurrente</h3>
+	<img src="img/Q19887926.png"><h3>Adjunto de himenio emarginado</h3>
+	<img src="img/Q14544563.png"><h3>Fijación de himenio libre</h3>
+	<img src="img/Q19887929.png"><h3>Adjunto de himenio secante</h3>
+	<img src="img/Q19887930.png"><h3>Sinuato de himen adjunto</h3>
+	<img src="img/Q19887931.png"><h3>Adjunto de himenio subdecurrente</h3>
+	<img src="img/Q19887932.png"><h3>Sin fijación de himenio</h3>
+	
+	<h2>Tipo de himenio</h2>
+	<img src="img/Q269345.png"><h3>Láminas</h3>
+	<img src="img/Q19861549.png"><h3>Poros</h3>
+	<img src="img/Q19861550.png"><h3>Liso</h3>
+	<img src="img/Q19861551.png"><h3>Crestas</h3>
+	<img src="img/Q19861552.png"><h3>Dientes</h3>
+	<img src="img/Q2034230.png"><h3>Carnosa</h3>
+
+
+	<h2>Comestibilidad</h2>
+	<img src="img/Q654236.png"><h3>Comestible</h3>
+	<img src="img/Q4317894.png"><h3>No comestible</h3>
+	<img src="img/Q19888537.png"><h3>Precaución</h3>
+	<img src="img/Q1169875.png"><h3>Psicoactiva</h3>
+	<img src="img/Q19888562.png"><h3>Venenosa</h3>
+	<img src="img/Q19888579.png"><h3>Alérgico</h3>
+	<img src="img/Q19888591.png"><h3>Mortal</h3>
