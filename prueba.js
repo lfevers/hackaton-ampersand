@@ -75,7 +75,6 @@ function prueba(){
   // - ESTIRPE
 
   var estirpe= document.querySelector('input[name="estirpe"]:checked').value;
-  console.log("value estirpe: " + estirpe);
 
   if (estirpe != '') {// SI NO HE ESCOGIDO FORMA NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
     estirpe =               // Y LO AÑADO LUEGO A CONSULTA
@@ -83,6 +82,18 @@ function prueba(){
       ?Agaricales wdt:P786 wd:` + estirpe + `.`;
   }
 
+
+
+  // - HIMENIO
+
+  var himenio= document.querySelector('input[name="himenio"]:checked').value;
+  console.log("value HIMENIO: " + himenio);
+
+  if (himenio != '') {// SI NO HE ESCOGIDO FORMA NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
+    himenio =               // Y LO AÑADO LUEGO A CONSULTA
+      `?Agaricales wdt:P785 ?accesorios_del_himenio.
+      ?Agaricales wdt:P785 wd:` + himenio + `.`;
+  }
 
 
   // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
@@ -97,6 +108,7 @@ function prueba(){
   `+ color + `  
   `+ shape + `
   `+ estirpe + ` 
+  `+ himenio + `
  
   OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
 
