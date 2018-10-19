@@ -7,7 +7,10 @@
 <body>
 	<div>
 		<h1>Buscador de setas por color de esporas</h1>	
+
+		<!-- SELECTOR DE COLOR-->
 		<select id="color">
+			<option value="">-Selecciona Color-</option>
 			<option value="Q23444">Blanco</option>
  			<option value="Q23445">Negro</option>
   			<option value="Q47071">Marron</option>
@@ -24,6 +27,7 @@
 
 		<br>
 
+		<!-- SELECTOR DE FORMA -->
 		<label for="hongo-conico"><img src="img/Q19887954.png" width="80"></label>
 		<label for="hongo-convexo"><img src="img/Q14544535.png" width="80"></label>
 		<label for="seta-deprimida"><img src="img/Q19887955.png" width="80"></label>
@@ -38,7 +42,9 @@
 
 		<br>
 
-		<input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" checked> 	Tapa de hongo cónico</input>
+		<input id="no-forma" type="radio" name="shape"			value="" 		checked> 	Selecciona Forma</input>
+		<br>
+		<input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" 	> 		Tapa de hongo cónico</input>
 		<br>
   		<input id="hongo-convexo" type="radio" name="shape" 	value="Q14544535" 	> 		Tapa de hongo convexo</input>
   		<br>
@@ -57,8 +63,64 @@
   		<input id="sin-tapa" type="radio" name="shape" 			value="Q19887965" 	> 		Sin tapa de seta</input>
   		<br>
   		<input id="concavo-plano" type="radio" name="shape" 	value="Q23058598" 	> 		Cóncavo al plano</input>
-  		
+		<br>  		
 
+  		<!-- SELECTOR CARACTER DE LA ESTIRPE -->
+
+		<label for="estirpe-desnudo"><img src="img/Q14544581.png" width="80"></label>
+		<label for="anilla-anillo"><img src="img/Q14544582.png" width="80"></label>
+		<label for="stipe-volva"><img src="img/Q19887985.png" width="80"></label>
+		<label for="anillo-stipe"><img src="img/Q19887987.png" width="80"></label>
+		<label for="cortina-stipe"><img src="img/Q19887988.png" width="80"></label>
+
+		<br>
+		<input id="no-estirpe" type="radio" name="estirpe"			value="" 		checked> 	Selecciona Forma</input>
+		<br>
+		<input id="estirpe-desnudo" type="radio" name="estirpe"		value="Q14544581" 	> 		Estípite desnudo</input>
+		<br>
+		<input id="anilla-anillo" type="radio" name="estirpe" 		value="Q14544582" 	> 		Anilla de anillo</input>
+		<br>
+  		<input id="stipe-volva" type="radio" name="estirpe" 		value="Q19887985" 	> 		Stipe volva</input>
+  		<br>
+  		<input id="anillo-stipe" type="radio" name="estirpe" 		value="Q19887987" 	> 		Anillo y volva stipe</input>
+  		<br>
+  		<input id="cortina-stipe" type="radio" name="estirpe" 		value="Q19887988" 	> 		Cortina stipe</input>
+  		<br>
+
+  		<!-- SELECTOR HIMENIO -->
+
+		<label for="adenato-himen"><img src="img/Q14544569.png" width="80"></label>
+		<label for="himenio-anexado"><img src="img/Q19887923.png" width="80"></label>
+		<label for="himenio-decurrente"><img src="img/Q19887925.png" width="80"></label>
+		<label for="himenio-emarginado"><img src="img/Q19887926.png" width="80"></label>
+		<label for="himenio-libre"><img src="img/Q14544563.png" width="80"></label>
+		<label for="himenio-secante"><img src="img/Q19887929.png" width="80"></label>
+		<label for="sinuato-himen"><img src="img/Q19887930.png" width="80"></label>
+		<label for="subdecurrente"><img src="img/Q19887931.png" width="80"></label>
+		<label for="sin-himenio"><img src="img/Q19887932.png" width="80"></label>
+
+		<br>
+
+		<input id="no-himenio" type="radio" name="himenio"			value="" 		checked> 	Selecciona Forma</input>
+		<br>
+		<input id="adenato-himen" type="radio" name="himenio"		value="Q14544569" 	> 		Adenato de himen adjunto</input>
+		<br>
+		<input id="himenio-anexado" type="radio" name="himenio" 	value="Q19887923" 	> 		Adjunto de himenio anexado</input>
+		<br>
+  		<input id="himenio-decurrente" type="radio" name="himenio" 	value="Q19887925" 	> 		Fijación de himenio decurrente</input>
+  		<br>
+  		<input id="himenio-emarginado" type="radio" name="himenio" 	value="Q19887926" 	> 		Adjunto de himenio emarginado</input>
+  		<br>
+  		<input id="himenio-libre" type="radio" name="himenio" 		value="Q14544563" 	> 		Fijación de himenio libre</input>
+  		<br>
+  		<input id="himenio-secante" type="radio" name="himenio" 	value="Q19887929" 	>		Adjunto de himenio secante</input>
+  		<br>
+  		<input id="sinuato-himen" type="radio" name="himenio" 		value="Q19887930" 	> 		Sinuato de himen adjunto</input>
+  		<br>
+  		<input id="subdecurrente" type="radio" name="himenio" 		value="Q19887931" 	> 		Adjunto de himenio subdecurrente</input>
+  		<br>
+  		<input id="sin-himenio" type="radio" name="himenio" 		value="Q19887932" 	> 		Sin fijación de himenio</input>
+  		<br>
 
 		<!--
 
@@ -79,8 +141,6 @@
 		</select>
 
 		-->
-		
-
 
 		
 		<button onclick="prueba();">Buscar</button>
