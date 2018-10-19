@@ -84,7 +84,7 @@ function prueba(){
 
 
 
-  // - HIMENIO
+  // - ACCESORIO HIMENIO
 
   var himenio= document.querySelector('input[name="himenio"]:checked').value;
   console.log("value HIMENIO: " + himenio);
@@ -95,6 +95,16 @@ function prueba(){
       ?Agaricales wdt:P785 wd:` + himenio + `.`;
   }
 
+   // - TIPO HIMENIO
+
+  var t_himenio= document.querySelector('input[name="t-himenio"]:checked').value;
+  console.log("value T-HIMENIO: " + t_himenio);
+
+  if (t_himenio != '') {// SI NO HE ESCOGIDO FORMA NO RELLENO, SI HE ESCOGIDO, PONGO EL COMANDO DE BUSQUEDA CORRESPONDIENTE
+    t_himenio =               // Y LO AÑADO LUEGO A CONSULTA
+      `?Agaricales wdt:P783 ?tipo_de_himenio.
+      ?Agaricales wdt:P783 wd:` + t_himenio + `.`;
+  }
 
   // AQUI ESTA LA CONSULTA, AQUI TENEIS QUE ESCOGER LOS PARAMENTROS QUE QUEREIS RECIBIR
   //ESO LO MIRAIS CON CLAUDIA
@@ -109,6 +119,7 @@ function prueba(){
   `+ shape + `
   `+ estirpe + ` 
   `+ himenio + `
+  `+ t_himenio + `
  
   OPTIONAL { ?Agaricales wdt:P789 ?comestibilidad. }
 
