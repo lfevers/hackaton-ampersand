@@ -100,9 +100,12 @@ function busqueda(){
           '<img class="img-class" src=' + JSON.stringify(result.imagen.value) + ' width="100" alt="asdf"></img>' +
           '<span class="comestibilidad"> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' + 
           '</div>'
-  
       }
-  
+
+      if(html == ""){
+        html = 
+        '<p>No se han encontrado resultados para esta busqueda</p>'
+      }
       document.getElementById("resultados2").innerHTML = html;
   
   } );
