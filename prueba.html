@@ -7,22 +7,12 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:500,800,900" rel="stylesheet">
 </head>
 <body>
-	<div class="imageninicio">
-			<img src="../hackaton-ampersand/imagenes/LOGOTYPE.png" width="200" alt="">	
-	</div>
+	<div>
+		<h1>Buscador de setas por color de esporas</h1>	
 
-
-	<div class="main">
-		
-			<div id="caja-titulo" >
-					<h1>FILTRO MUSHPICK</h1>
-			</div>
-			<br>
-
-		<div class="selector">
-		<p>Color Himenio</p>
-		
-		<select >
+		<!-- SELECTOR DE COLOR-->
+		<select id="color">
+			<option value="">-Selecciona Color-</option>
 			<option value="Q23444">Blanco</option>
  			<option value="Q23445">Negro</option>
   			<option value="Q47071">Marron</option>
@@ -41,23 +31,23 @@
 
 		<br>
 
-	<div class="labels">
-			<p>Forma de la copa</p>
-		<label for="hongo-conico"><img src="img/Q19887954.png" ></label>
-		<label for="hongo-convexo"><img src="img/Q14544535.png" ></label>
-		<label for="seta-deprimida"><img src="img/Q19887955.png" ></label>
-		<label for="plana-setas"><img src="img/Q19887957.png" ></label>
-		<label for="infundi"><img src="img/Q19887958.png" ></label>
-		<label for="seta-offset"><img src="img/Q14544541.png" ></label>
-		<label for="seta-ovada"><img src="img/Q19887961.png" ></label>
-		<label for="tapa-hongo"><img src="img/Q19887964.png" ></label>
-		<label for="sin-tapa"><img src="img/Q19887965.png" ></label>
-		<label for="concavo-plano"><img src="img/Q23058598.png" ></label>
-	</div>
+		<!-- SELECTOR DE FORMA -->
+		<label for="hongo-conico"><img src="img/Q19887954.png" width="80"></label>
+		<label for="hongo-convexo"><img src="img/Q14544535.png" width="80"></label>
+		<label for="seta-deprimida"><img src="img/Q19887955.png" width="80"></label>
+		<label for="plana-setas"><img src="img/Q19887957.png" width="80"></label>
+		<label for="infundi"><img src="img/Q19887958.png" width="80"></label>
+		<label for="seta-offset"><img src="img/Q14544541.png" width="80"></label>
+		<label for="seta-ovada"><img src="img/Q19887961.png" width="80"></label>
+		<label for="tapa-hongo"><img src="img/Q19887964.png" width="80"></label>
+		<label for="sin-tapa"><img src="img/Q19887965.png" width="80"></label>
+		<label for="concavo-plano"><img src="img/Q23058598.png" width="80"></label>
 
 		<br>
-	<div class="radiobuttons">
-		<input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" checked> 	Tapa de hongo cónico</input>
+
+		<input id="no-forma" type="radio" name="shape"			value="" 		checked> 	Selecciona Forma</input>
+		<br>
+		<input id="hongo-conico" type="radio" name="shape" 		value="Q19887954" 	> 		Tapa de hongo cónico</input>
 		<br>
   		<input id="hongo-convexo" type="radio" name="shape" 	value="Q14544535" 	> 		Tapa de hongo convexo</input>
   		<br>
@@ -76,9 +66,30 @@
   		<input id="sin-tapa" type="radio" name="shape" 			value="Q19887965" 	> 		Sin tapa de seta</input>
   		<br>
   		<input id="concavo-plano" type="radio" name="shape" 	value="Q23058598" 	> 		Cóncavo al plano</input>
-	</div>
+		<br>  		
 
+  		<!-- SELECTOR CARACTER DE LA ESTIRPE -->
 
+		<label for="estirpe-desnudo"><img src="img/Q14544581.png" width="80"></label>
+		<label for="anilla-anillo"><img src="img/Q14544582.png" width="80"></label>
+		<label for="stipe-volva"><img src="img/Q19887985.png" width="80"></label>
+		<label for="anillo-stipe"><img src="img/Q19887987.png" width="80"></label>
+		<label for="cortina-stipe"><img src="img/Q19887988.png" width="80"></label>
+
+		<br>
+		<input id="no-forma" type="radio" name="estirpe"			value="" 		checked> 	Selecciona Forma</input>
+		<br>
+		<input id="estirpe-desnudo" type="radio" name="estirpe"		value="Q14544581" 	> 		Estípite desnudo</input>
+		<br>
+		<input id="anilla-anillo" type="radio" name="estirpe" 		value="Q14544582" 	> 		Anilla de anillo</input>
+		<br>
+  		<input id="stipe-volva" type="radio" name="estirpe" 		value="Q19887985" 	> 		Stipe volva</input>
+  		<br>
+  		<input id="anillo-stipe" type="radio" name="estirpe" 		value="Q19887987" 	> 		Anillo y volva stipe</input>
+  		<br>
+  		<input id="cortina-stipe" type="radio" name="estirpe" 		value="Q19887988" 	> 		Cortina stipe</input>
+  		<br>
+  		
 		<!--
 
 			<select id="forma">
@@ -98,13 +109,14 @@
 		</select>
 
 		-->
-		
-
 
 		
 		<button onclick="prueba();">Buscar</button>
 	</div>
 	
-	<div id="resultados"> </div>
+	<div id="resultados"> 
+		
+	</div>
+
 </body>
 </html>
