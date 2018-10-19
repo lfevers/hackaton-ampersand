@@ -17,3 +17,49 @@ SELECT ?AgaricalesLabel ?imagen ?comestibilidadLabel ?mushroom_cap_shapeLabel ?t
   ?Agaricales wdt:P783 ?tipo_de_himenio
 }
 
+
+
+
+DESCRIBE wd:Q659629
+
+
+https://www.wikidata.org/wiki/Special:EntityData/Q659629.json
+
+select *
+where {wd:Q188643 wdt:P789 ?comestibilidad.
+       wd:Q188643 wdt:P18 ?imagen.
+       wd:Q188643 wdt:P787 ?spore_print_color.
+       wd:Q188643 wdt:P784 ?mushroom_cap_shape.
+       wd:Q188643 wdt:P786 ?car_cter_del_estipe.
+       wd:Q188643 wdt:P785 ?accesorios_del_himenio.
+       wd:Q188643 wdt:P783 ?tipo_de_himenio.
+      }
+
+
+
+SELECT  ?comestibilidadLabel ?imagen ?spore_print_colorLabel ?mushroom_cap_shapeLabel ?car_cter_del_estipeLabel ?accesorios_del_himenioLabel ?tipo_de_himenioLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  wd:Q188643 wdt:P789 ?comestibilidad.
+  OPTIONAL{ wd:Q188643 wdt:P18 ?imagen.
+           wd:Q188643 wdt:P787 ?spore_print_color.
+           wd:Q188643 wdt:P784 ?mushroom_cap_shape.
+           wd:Q188643 wdt:P786 ?car_cter_del_estipe.
+           wd:Q188643 wdt:P785 ?accesorios_del_himenio.
+           wd:Q188643 wdt:P783 ?tipo_de_himenio.
+          } 
+}
+
+
+
+SELECT  ?comestibilidadLabel ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  wd:Q188643 wdt:P789 ?comestibilidad.
+  OPTIONAL{ 
+          wd:Q188643 wdt:P18 ?imagen.
+           wd:Q188643 wdt:P787 ?spore_print_color.
+           wd:Q188643 wdt:P784 ?mushroom_cap_shape.
+           wd:Q188643 wdt:P786 ?car_cter_del_estipe.
+           wd:Q188643 wdt:P785 ?accesorios_del_himenio.
+           wd:Q188643 wdt:P783 ?tipo_de_himenio.
+          } 
+}

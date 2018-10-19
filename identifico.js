@@ -5,26 +5,35 @@ function split(texto){
   var result = pieces[pieces.length-1];
   return result;
 }
+function getParameterByName(name){
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+    results = regex.exec(location.search);
+    return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
 
 function identificar() {
 	// body...
 	console.log("HOLA");
+
 	var seta = "Q188643"
+	var seta = getParameterByName("Q");
+	var nombre = getParameterByName("name");
+
+	console.log("SETAAAAAAA:"+seta);
 
 	var consulta = `SELECT  ?comestibilidadLabel ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
-  wd:`+seta+` wdt:P789 ?comestibilidad.
-  OPTIONAL{ 
-          wd:`+seta+` wdt:P18 ?imagen.
-           wd:`+seta+` wdt:P787 ?spore_print_color.
-           wd:`+seta+` wdt:P784 ?mushroom_cap_shape.
-           wd:`+seta+` wdt:P786 ?car_cter_del_estipe.
-           wd:`+seta+` wdt:P785 ?accesorios_del_himenio.
-           wd:`+seta+` wdt:P783 ?tipo_de_himenio.
-          } 
+  wd:Q222449 wdt:P789 ?comestibilidad.
+          OPTIONAL{ wd:` + seta + ` wdt:P18 ?imagen.}
+          OPTIONAL{ wd:` + seta + ` wdt:P787 ?spore_print_color.}
+          OPTIONAL{ wd:` + seta + ` wdt:P784 ?mushroom_cap_shape.}
+          OPTIONAL{ wd:` + seta + ` wdt:P786 ?car_cter_del_estipe.}
+          OPTIONAL{ wd:` + seta + ` wdt:P785 ?accesorios_del_himenio.}
+          OPTIONAL{ wd:` + seta + ` wdt:P783 ?tipo_de_himenio.} 
 }
 `;
-console.log("CONSUKTA");
+console.log("CONSULTA");
 console.log(consulta);
 
 //DESDE AQUI HASTA ....
@@ -46,7 +55,10 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
         //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
         for ( const result of results.bindings ) {
 
-          switch(result.comestibilidadLabel.value) {
+
+        	comestibilidad ="no.png";
+			if( result.comestibilidadLabel != undefined){
+			switch(result.comestibilidadLabel.value) {
 			    case "edible mushroom":
 			        comestibilidad= "Q654236.png";
 			        break;
@@ -54,22 +66,30 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        comestibilidad= "Q4317894.png";
 			        break;
 			    case "caution mushroom":
-			        comestibilidad= "Q19888537.png";
+			    console.log("HOLACONVEX MUS");
+			        comestibilidad="Q19888537.png";
+			        console.log(cap);
 			        break;
-			    case "psychoactive mushroom":
+			    case "psychoactive mushroomp":
 			        comestibilidad= "Q1169875.png";
 			        break;
 			    case "poisonous mushroom":
 			        comestibilidad= "Q19888562.png";
 			        break;
+			    case "allergenic mushroom":
+			        comestibilidad= "Q19888579.png";
+			        break;
 			    case "deadly mushroom":
 			        comestibilidad= "Q19888591.png";
-			        break;
+			        break;	
 			    default:
 			        comestibilidad= "Q19888591.png";
 			        break;  
-			}
+				}
+			}	
 
+			cap ="no.png";
+			if( result.mushroom_cap_shapeLabel != undefined){
 			switch(result.mushroom_cap_shapeLabel.value) {
 			    case "campanulate mushroom cap":
 			        cap= "Q19887953.png";
@@ -112,8 +132,11 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			    default:
 			        cap= "Q23058598.png";
 			        break;  
-			}
+				}
+			}	
 
+			tipo_h ="no.png";
+			if( result.tipo_de_himenioLabel != undefined){
 			switch(result.tipo_de_himenioLabel.value) {
 			    case "lamella":
 			        tipo_h= "Q269345.png";
@@ -136,8 +159,14 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			    default:
 			        tipo_h= "Q2034230.png";
 			        break;  
+				}
 			}
-			switch(result.accesorios_del_himenioLabel.value) {
+
+			console.log("ESTOOO: " + result.accesorios_del_himenioLabel);
+			accesorio_himen ="no.png";
+			if( result.accesorios_del_himenioLabel != undefined){
+				console.log("NO undefinido");
+				switch(result.accesorios_del_himenioLabel.value) {
 			    case "adnate hymenium attachment":
 			        accesorio_himen= "Q14544569.png";
 			        break;
@@ -168,9 +197,12 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			    default:
 			        accesorio_himen= "Q19887932.png";
 			        break;  
-			}
+				}
+			}			
 
-			switch(result.car_cter_del_estipeLabel.value) {
+			caracter ="no.png";
+			if( result.accesorios_del_himenioLabel != undefined){
+				switch(result.accesorios_del_himenioLabel.value) {
 			    case "bare stipe":
 			        caracter= "Q14544581.png";
 			        break;
@@ -191,7 +223,11 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;  
 			}
 
-			switch(result.spore_print_colorLabel.value) {
+			}
+
+			color_e ="no.png";
+			if( result.spore_print_colorLabel != undefined){
+				switch(result.spore_print_colorLabel.value) {
 			    case "black":
 			        color_e= "Q23445.png";
 			        break;
@@ -232,20 +268,23 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        color_e= "Q23444.png";
 			        break;  
 			}
+			}
 
+			
 
+/*
           var Q=result.accesorios_del_himenioLabel.value;
 
           console.log(Q);
           var objetoQ = split(Q);
           console.log(objetoQ);
-
+*/
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
            //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS         
           `
                 <div class="centrar">
-					<p class="nombre">Amanita Muscaria</p>
+					<p class="nombre">`+nombre+`</p>
 				</div>
 				<div class="centrar">
 					<img src="`+result.imagen.value+ `" class="img-class image5">
