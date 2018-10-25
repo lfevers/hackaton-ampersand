@@ -73,6 +73,7 @@ figure {
 .content-button {
 	display: flex;
 	justify-content: center;
+	margin-bottom: 15px;
 }
 
 label>img {
@@ -96,4 +97,39 @@ input[type="radio"]:hover+label>img {
 
 figure>div {
 	padding: 12px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+    padding: 10px;
+    background-color: #333333; /* Gris oscuro */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+body{
+	margin-bottom: 50px;
+}
+
+.results {
+	cursor: pointer;
+}
+
+.results-pic {
+	width: 90px;
+    height: 90px;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 60px;
+    -moz-background-clip: padding;
+    border-radius: 60px;
+    background-clip: padding-box;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    align-self: center;
 }

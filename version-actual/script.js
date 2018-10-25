@@ -98,11 +98,11 @@ function busqueda_avanzada(){ // CONSULTA Y RESPUESTA A LA BUSQUEDA DESDE FORMUL
           console.log("ID: " + id2);
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
-          '<div class="results" id="resultado">' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
-          '<a class="enlace_seta" href="identificar.html?Q='+ id2 +'&name='+ result.AgaricalesLabel.value +'"><h3>' + result.AgaricalesLabel.value + '</h3></a>' + 
-          '<img class="img-class" src=' + JSON.stringify(result.imagen.value) + ' width="100" alt="asdf"></img>' +
-          '<span class="comestibilidad"> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' + 
-          '</div>'
+          '<article class="results" onclick="#">' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
+            '<a href="identificar.html?Q='+ id2 +'&name='+ result.AgaricalesLabel.value +'"><h3>' + result.AgaricalesLabel.value + '</h3></a>' + 
+            '<img src=' + JSON.stringify(result.imagen.value) + ' class="results-pic" width="100" alt="Imagen"></img>' +
+            '<span> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' + 
+          '</article>'
       }
 
       if(html == ""){
