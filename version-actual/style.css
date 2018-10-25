@@ -1,0 +1,135 @@
+* {
+	font-family: 'Roboto', sans-serif;
+}
+
+h1 {
+	text-align: center;
+}
+
+a, button {
+	cursor: pointer;
+}
+
+body {
+	margin: 0;
+}
+
+main {
+	padding: 2%;
+}
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #9CCC65; /* Verde */
+	height: 75px;
+}
+
+nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: #333333; /* Gris oscuro */
+	padding: 15px 0;
+}
+
+article {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+	background-color: #9CCC65;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+#logo {
+    height: 3em;
+    padding-left: 10%;
+}
+
+.button {
+	color: white;
+	text-decoration: none;
+	font-size: 1.25em;
+	background-color: #333333;
+	border: none;
+}
+
+.button-xxl {
+	width: 100%;
+	padding: 15px 0;
+	border-radius: 100px
+}
+
+.content-button {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+label>img {
+	width: 80px;
+	cursor: pointer;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]:checked+label>img { 
+	transform: scale(1.4);
+	transition: transform 0.2s ease-in-out;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="radio"]:hover+label>img { 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure>div {
+	padding: 12px;
+}
+
+footer {
+	display: flex;
+	justify-content: center;
+    padding: 10px;
+    background-color: #333333; /* Gris oscuro */
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 50px;
+}
+
+body{
+	margin-bottom: 50px;
+}
+
+.results {
+	cursor: pointer;
+}
+
+.results-pic {
+	width: 90px;
+    height: 90px;
+    -webkit-border-radius: 60px;
+    -webkit-background-clip: padding-box;
+    -moz-border-radius: 60px;
+    -moz-background-clip: padding;
+    border-radius: 60px;
+    background-clip: padding-box;
+    float: left;
+    background-size: cover;
+    background-position: center center;
+    align-self: center;
+}
