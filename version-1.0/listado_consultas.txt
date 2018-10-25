@@ -71,6 +71,9 @@ Despliegue de opciones:
 edible mushroom (Q654236)- comestible
 inedible mushroom (Q4317894)-no comestible
 caution mushroom (Q19888537)- precaución
+
+
+ORDER BY DESC(?time)
 psychoactive mushroom (Q1169875)-psicoactiva
 poisonous mushroom (Q19888562) - venenosa
 allergenic mushroom (Q19888579) - alérgico

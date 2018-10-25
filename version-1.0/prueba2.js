@@ -77,7 +77,7 @@ const endpointUrl = 'https://query.wikidata.org/sparql',
 fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
     const { head: { vars }, results } = json;
     //...AQUI NO SE TOCA
-    console.log(results.bindings); //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
+    console.log("hola: " + results); //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
     //RESULT BINDINGS ES EL VECTOR CON TODOS LOS RESULTADOS
     if(results.bindings.length !=0){
         var n_results = 0;

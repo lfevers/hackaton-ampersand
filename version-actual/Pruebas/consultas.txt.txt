@@ -1,0 +1,43 @@
+SELECT   ?comestibilidadLabel ?nombreLabel  ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  wd:Q131227 wdt:P789 ?comestibilidad.
+          OPTIONAL{ wd:Q131227 wdt:P225 ?nombre.}
+          OPTIONAL{ wd:Q131227 wdt:P18 ?imagen.}
+          OPTIONAL{ wd:Q131227 wdt:P787 ?spore_print_color.}
+          OPTIONAL{ wd:Q131227 wdt:P784 ?mushroom_cap_shape.}
+          OPTIONAL{ wd:Q131227 wdt:P786 ?car_cter_del_estipe.}
+          OPTIONAL{ wd:Q131227 wdt:P785 ?accesorios_del_himenio.}
+          OPTIONAL{ wd:Q131227 wdt:P783 ?tipo_de_himenio.} 
+}
+
+
+
+
+Selecciona sin salir repetidas:
+
+SELECT DISTINCT ?Agaricales ?AgaricalesLabel WHERE {
+  {
+    SELECT ?Agaricales ?AgaricalesLabel ?comestibilidad ?comestibilidadLabel ?imagen WHERE {
+      SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+      ?Agaricales wdt:P171* wd:Q27720.
+      ?Agaricales wdt:P789 ?comestibilidad.
+      ?Agaricales wdt:P18 ?imagen.
+    }
+  }
+}
+ORDER BY ?AgaricalesLabel
+
+
+
+Consulta de una seta a traves de su Q solo un resultado
+SELECT DISTINCT ?nombreLabel  ?comestibilidadLabel ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+  wd:Q4532087 wdt:P789 ?comestibilidad.
+  		  OPTIONAL{ wd:Q4532087 wdt:P225 ?nombre.}
+          OPTIONAL{ wd:Q4532087 wdt:P18 ?imagen.}
+          OPTIONAL{ wd:Q4532087 wdt:P787 ?spore_print_color.}
+          OPTIONAL{ wd:Q4532087 wdt:P784 ?mushroom_cap_shape.}
+          OPTIONAL{ wd:Q4532087 wdt:P786 ?car_cter_del_estipe.}
+          OPTIONAL{ wd:Q4532087 wdt:P785 ?accesorios_del_himenio.}
+          OPTIONAL{ wd:Q4532087 wdt:P783 ?tipo_de_himenio.} 
+	}LIMIT 1

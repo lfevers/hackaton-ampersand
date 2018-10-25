@@ -11,30 +11,27 @@ function getParameterByName(name){
     results = regex.exec(location.search);
     return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
 }
-
 function identificar() {
-	// body...
-	console.log("HOLA");
 
-	var seta = "Q188643"
+	//var seta = "Q188643"
 	var seta = getParameterByName("Q");
-	var nombre = getParameterByName("name");
 
 	console.log("SETAAAAAAA:"+seta);
 
-	var consulta = `SELECT ?AgaricalesLabel  ?comestibilidadLabel ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
+	var consulta = `SELECT ?nombreLabel  ?comestibilidadLabel ?imagen ?spore_print_color ?spore_print_colorLabel ?mushroom_cap_shape ?mushroom_cap_shapeLabel ?car_cter_del_estipe ?car_cter_del_estipeLabel ?accesorios_del_himenio ?accesorios_del_himenioLabel ?tipo_de_himenio ?tipo_de_himenioLabel WHERE {
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
   wd:` + seta + ` wdt:P789 ?comestibilidad.
+  		  OPTIONAL{ wd:` + seta + ` wdt:P225 ?nombre.}
           OPTIONAL{ wd:` + seta + ` wdt:P18 ?imagen.}
           OPTIONAL{ wd:` + seta + ` wdt:P787 ?spore_print_color.}
           OPTIONAL{ wd:` + seta + ` wdt:P784 ?mushroom_cap_shape.}
           OPTIONAL{ wd:` + seta + ` wdt:P786 ?car_cter_del_estipe.}
           OPTIONAL{ wd:` + seta + ` wdt:P785 ?accesorios_del_himenio.}
           OPTIONAL{ wd:` + seta + ` wdt:P783 ?tipo_de_himenio.} 
-}
-`;
-console.log("CONSULTA");
-console.log(consulta);
+	}LIMIT 1
+	`;
+
+	console.log(consulta);
 
 //DESDE AQUI HASTA ....
 const endpointUrl = 'https://query.wikidata.org/sparql',
@@ -55,6 +52,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
         //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
         for ( const result of results.bindings ) {
 
+        	nombre = result.nombreLabel.value;
 
         	comestibilidad ="no.png";
 			if( result.comestibilidadLabel != undefined){
@@ -284,7 +282,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
            //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS         
           `
                 <div class="centrar">
-					<p class="nombre">`+nombre+`</p>
+					<h1 class="nombre">`+nombre+`</h1>
 				</div>
 				<div class="centrar">
 					<img src="`+result.imagen.value+ `" class="img-class image5">
@@ -347,8 +345,6 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 				</div>	
             
           `
-
-
         }
 
         document.getElementById("resultados").innerHTML = html;
