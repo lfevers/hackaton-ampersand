@@ -1,3 +1,18 @@
-<p>
-  listado works!
-</p>
+<div id="resultados">
+
+  <button class="btn" (click)="prueba2();">
+    Atrás
+  </button>
+
+
+<!-- <button (click)="prueba2('1','1','1');">Holass</button> -->
+
+<div *ngFor="let k of array">
+
+  <button class="btn" (click)="prueba(k.anterior, k.esta, k.nombre);">
+    {{k.nombre}}
+  </button>
+
+</div>
+
+</div>
