@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 20px;
+  max-width: 100% !important;
+
+  background-color: #9CCC65; */ /* Color antiguo
+  /* background-color: #6bdc17; */
+  /* background-color: #64dd17; */
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* margin: 2%; */
+}
+
+.card {
+  margin: 15px;
+  padding: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  min-width: 190px;
+  max-width: 190px;
+
+}
+
+.card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.card-title {
+  padding: 5px !important;
+  text-align: center;
+  margin: 0;
+}
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
