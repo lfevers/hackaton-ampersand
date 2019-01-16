@@ -290,7 +290,8 @@
         <div class="card-body">
           <h5 class="card-title">{{result.AgaricalesLabel.value}}</h5>
           <p class="card-text">Comestibilidad: {{result.comestibilidadLabel.value}}</p>
-        </div>
+					<a [routerLink]="['/seta' , result.Agaricales.value , result.AgaricalesLabel.value]">Ver seta</a>
+				</div>
       </div>
     </div>
     <h2>{{no_resultados}}</h2>

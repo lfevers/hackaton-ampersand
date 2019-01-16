@@ -5,6 +5,7 @@ function split(texto){
   var result = pieces[pieces.length-1];
   return result;
 }
+
 function getParameterByName(name){
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
     var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
@@ -30,7 +31,7 @@ function identificar() {
           OPTIONAL{ wd:` + seta + ` wdt:P784 ?mushroom_cap_shape.}
           OPTIONAL{ wd:` + seta + ` wdt:P786 ?car_cter_del_estipe.}
           OPTIONAL{ wd:` + seta + ` wdt:P785 ?accesorios_del_himenio.}
-          OPTIONAL{ wd:` + seta + ` wdt:P783 ?tipo_de_himenio.} 
+          OPTIONAL{ wd:` + seta + ` wdt:P783 ?tipo_de_himenio.}
 }
 `;
 console.log("CONSULTA");
@@ -48,7 +49,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
     //...AQUI NO SE TOCA
     console.log(results.bindings); //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
     //RESULT BINDINGS ES EL VECTOR CON TODOS LOS RESULTADOS
-    if(results.bindings.length !=0){    
+    if(results.bindings.length !=0){
 
         var n_results = 0;
         var html = "";
@@ -81,12 +82,12 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    case "deadly mushroom":
 			        comestibilidad= "Q19888591.png";
-			        break;	
+			        break;
 			    default:
 			        comestibilidad= "no.png";
-			        break;  
+			        break;
 				}
-			}	
+			}
 
 			cap ="no.png";
 			if( result.mushroom_cap_shapeLabel != undefined){
@@ -128,12 +129,12 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    case "concave to plane":
 			        cap= "Q23058598.png";
-			        break;			
+			        break;
 			    default:
 			        cap= "no.png";
-			        break;  
+			        break;
 				}
-			}	
+			}
 
 			tipo_h ="no.png";
 			if( result.tipo_de_himenioLabel != undefined){
@@ -158,7 +159,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    default:
 			        tipo_h= "no.png";
-			        break;  
+			        break;
 				}
 			}
 
@@ -196,9 +197,9 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    default:
 			        accesorio_himen= "no.png";
-			        break;  
+			        break;
 				}
-			}			
+			}
 
 			caracter ="no.png";
 			if( result.accesorios_del_himenioLabel != undefined){
@@ -220,7 +221,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    default:
 			        caracter= "no.png";
-			        break;  
+			        break;
 			}
 
 			}
@@ -266,11 +267,11 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 			        break;
 			    default:
 			        color_e= "no.png";
-			        break;  
+			        break;
 			}
 			}
 
-			
+
 
 /*
           var Q=result.accesorios_del_himenioLabel.value;
@@ -281,7 +282,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 */
           //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
           html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
-           //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS         
+           //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
           `
                 <div class="centrar">
 					<p class="nombre">`+nombre+`</p>
@@ -297,7 +298,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+comestibilidad+ `" class="imagen4">
-						</div>	
+						</div>
 					</div>
 
 					<div class="tarjeta">
@@ -306,7 +307,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+cap+`" class="imagen4">
-						</div>	
+						</div>
 					</div>
 
 					<div class="tarjeta">
@@ -315,7 +316,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+tipo_h+`" class="imagen4">
-						</div>	
+						</div>
 					</div>
 
 					<div class="tarjeta">
@@ -324,8 +325,8 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+accesorio_himen+`" class="imagen4">
-						</div>	
-					</div>	
+						</div>
+					</div>
 
 					<div class="tarjeta">
 						<div class="imagen3">
@@ -333,8 +334,8 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+caracter+`" class="imagen4">
-						</div>	
-					</div>	
+						</div>
+					</div>
 
 					<div class="tarjeta">
 						<div class="imagen3">
@@ -342,10 +343,10 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
 						</div>
 						<div>
 							<img src="img/`+color_e+`" class="imagen4">
-						</div>	
-					</div>				
-				</div>	
-            
+						</div>
+					</div>
+				</div>
+
           `
 
 
@@ -356,8 +357,7 @@ fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
           console.log("ULTIMA" + n); // EN N ESTA ALMACENADA LA Q DE LA SETA QUE HAY QUE MOSTRAR
           //window.location.href= "identificar.html&"+n;
         }
-    
+
 
 } );
 }
-

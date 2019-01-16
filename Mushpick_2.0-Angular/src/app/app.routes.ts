@@ -9,7 +9,7 @@ const APP_ROUTES: Routes = [
   { path: 'identificar',  component: IdentificarComponent},
   { path: 'listado',  component: ListadoComponent},
   { path: 'ayuda',  component: AyudaComponent},
-  { path: 'seta',  component: DetalleSetaComponent},
+  { path: 'seta/:Q/:name',  component: DetalleSetaComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'identificar' }
 ];
 
