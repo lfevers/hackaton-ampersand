@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { WikidataService } from '../../services/wikidata.service';
 
 @Component({
   selector: 'app-identificar',
