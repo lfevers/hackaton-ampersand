@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { IdentificarComponent } from './components/identificar/identificar.component';
 import { ListadoComponent } from './components/listado/listado.component';
 import { AyudaComponent } from './components/ayuda/ayuda.component';
+import { DetalleSetaComponent } from './components/detalle-seta/detalle-seta.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IdentificarComponent,
     ListadoComponent,
-    AyudaComponent
+    AyudaComponent,
+    DetalleSetaComponent
   ],
   imports: [
     BrowserModule,
