@@ -1,0 +1,58 @@
+article {
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+	background-color: #9CCC65;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.button {
+	color: white;
+	text-decoration: none;
+	font-size: 1.25em;
+	background-color: #333333;
+	border: none;
+}
+
+.button-xxl {
+	width: 100%;
+	padding: 15px 0;
+	border-radius: 100px
+}
+
+.content-button {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 15px;
+}
+
+label>img {
+	width: 80px;
+	cursor: pointer;
+}
+
+input[type="radio"] {
+	display: none;
+}
+
+input[type="radio"]:checked+label>img {
+	transform: scale(1.4);
+	transition: transform 0.2s ease-in-out;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="radio"]:hover+label>img {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+figure>div {
+	padding: 12px;
+}

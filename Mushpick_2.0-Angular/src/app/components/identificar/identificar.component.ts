@@ -10,7 +10,8 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 export class IdentificarComponent implements OnInit {
 
   form_busqueda:FormGroup;
-
+  resultados:any;
+  no_resultados:string = "";
   constructor( public _wikidataService:WikidataService) {
     this.form_busqueda = new FormGroup({
     'color':  new FormControl             ('',  ),//this.dniDuplicado.bind(this)
@@ -110,35 +111,18 @@ export class IdentificarComponent implements OnInit {
     fetch( fullUrl, { headers } ).then( body => body.json() ).then( json => {
         const { head: { vars }, results } = json;
 
-        //...AQUI NO SE TOCA
-        //MUESTRO TODOS LOS RESULTADOS DE LA CONSULTA, ES UN VECTOR
-        //RESULT BINDINGS ES EL VECTOR CON TODOS LOS RESULTADOS
-        var n_results = 0;
+        console.log("results");
+        console.log(results.bindings);
 
-        var html = "";
-        //DENTRO DE EL VECTOR RESULT.BINDINGS CADA RESULTADO ES EL RESULT JUSTO AKI ABAJO SE HACE ESO
-        for ( const result of results.bindings ) {
-          console.log(result);
-
-            var id = result.Agaricales.value;
-            var id2 = this.split(id);
-            console.log("ID: " + id2);
-            //MOSTRAR LOS RESULTADOS CON NOMBRE, FOTO Y COMESTIBILIDAD
-            html +=  //ESTAS LINEAS SON LAS QUE TENEIS QUE MODIFICAR RECORDAD QUE SE VAN SUMANDO AL ESTAR EN UN BUCLE
-            '<article class="results" onclick="#">' + //TODO ESTO LUEGO VA DENTRO DEL DIV DE RESULTADOS
-              '<a href="identificar.html?Q='+ id2 +'&name='+ result.AgaricalesLabel.value +'"><h3>' + result.AgaricalesLabel.value + '</h3></a>' +
-              '<img src=' + JSON.stringify(result.imagen.value) + ' class="results-pic" width="100" alt="Imagen"></img>' +
-              '<span> Comestibilidad: ' + JSON.stringify(result.comestibilidadLabel.value)  + '</span>' +
-            '</article>'
+        this.resultados = results.bindings;
+        if(results.bindings.length < 1){
+          this.no_resultados =
+          'No se han encontrado resultados para esta busqueda'
         }
-
-        if(html == ""){
-          html =
-          '<p>No se han encontrado resultados para esta busqueda</p>'
+        else{
+          this.no_resultados = "";
         }
-        document.getElementById("resultados").innerHTML = html;
-
-    } );
+    });
 
   }
 

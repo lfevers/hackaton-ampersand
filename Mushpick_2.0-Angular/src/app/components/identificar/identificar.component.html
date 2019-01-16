@@ -106,7 +106,7 @@
 
             	<div>
             		<input id="infundi" type="radio" formControlName="shape" value="Q19887958">
-            		<label for="infundi"><img src="assets/img/Q19887958.png" alt="Infundi" "></label>
+            		<label for="infundi"><img src="assets/img/Q19887958.png" alt="Infundi"></label>
             	</div>
 
             	<div>
@@ -116,7 +116,7 @@
 
             	<div>
             		<input id="seta-ovada" type="radio" formControlName="shape" value="Q19887961">
-            		<label for="seta-ovada"><img src="assets/img/Q19887961.png" alt="Seta ovada" "></label>
+            		<label for="seta-ovada"><img src="assets/img/Q19887961.png" alt="Seta ovada"></label>
             	</div>
 
             	<div>
@@ -284,6 +284,15 @@
 
     </form>
 
-		<div id="resultados" class="resultados">
-    	</div>
+    <div class="card-columns">
+      <div class="card" *ngFor="let result of resultados">
+        <img [src]="result.imagen.value" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{result.AgaricalesLabel.value}}</h5>
+          <p class="card-text">Comestibilidad: {{result.comestibilidadLabel.value}}</p>
+        </div>
+      </div>
+    </div>
+    <h2>{{no_resultados}}</h2>
+
 	</main>
