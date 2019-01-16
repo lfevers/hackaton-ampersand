@@ -1,3 +1,298 @@
-<p>
-  identificar works!
-</p>
+<main>
+		<div>
+			<h1>Identificar seta</h1>
+		</div>
+
+    <form [formGroup]="form_busqueda">
+
+
+
+		<!-- COLOR DE ESPORAS -->
+		<article>
+			<h2>Color de esporas</h2>
+
+			<figure>
+				<div>
+		            <input id="blanco" type="radio" formControlName="color" value="Q23444">
+		            <label for="blanco"><img src="/assets/img/blanco.png" alt="Blanco"></label>
+		        </div>
+
+				<div>
+		            <input id="crema" type="radio" formControlName="color" value="Q2730433">
+		            <label for="crema"><img src="assets/img/crema.png" alt="Crema"></label>
+		        </div>
+
+				<div>
+		            <input id="salmon" type="radio" formControlName="color" value="Q2015138">
+		            <label for="salmon"><img src="assets/img/salmon.png" alt="Salmon"></label>
+		        </div>
+
+				<div>
+		            <input id="bronceado" type="radio" formControlName="color" value="Q23445">
+		            <label for="bronceado"><img src="assets/img/bronceado.png" alt="Bronceado"></label>
+		        </div>
+
+				<div>
+		            <input id="rosa" type="radio" formControlName="color" value="Q429220">
+		            <label for="rosa"><img src="assets/img/rosa.png" alt="Rosa"></label>
+		        </div>
+
+				<div>
+		            <input id="violeta" type="radio" formControlName="color" value="Q3257809">
+		            <label for="violeta"><img src="assets/img/violeta.png" alt="Violeta"></label>
+		        </div>
+
+				<div>
+		            <input id="marron" type="radio" formControlName="color" value="Q47071">
+		            <label for="marron"><img src="assets/img/marron.png" alt="Marrón"></label>
+		        </div>
+
+				<div>
+		            <input id="ocre" type="radio" formControlName="color" value="Q194191">
+		            <label for="ocre"><img src="assets/img/ocre.png" alt="Ocre"></label>
+		        </div>
+
+				<div>
+		            <input id="amarillo" type="radio" formControlName="color" value="Q943">
+		            <label for="amarillo"><img src="assets/img/amarillo.png" alt="Amarillo"></label>
+		        </div>
+
+				<div>
+		            <input id="verde" type="radio" formControlName="color" value="Q3133">
+		            <label for="verde"><img src="assets/img/verde.png" alt="Verde"></label>
+		        </div>
+
+				<div>
+		            <input id="aceituna" type="radio" formControlName="color" value="Q864152">
+		            <label for="aceituna"><img src="assets/img/aceituna.png" alt="Aceituna"></label>
+		        </div>
+
+				<div>
+		            <input id="negro" type="radio" formControlName="color" value="Q23445">
+		            <label for="negro"><img src="assets/img/negro.png" alt="Negro"></label>
+		        </div>
+
+            	<div>
+					<input id="duda-color" type="radio" formControlName="color" value="" checked>
+					<label for="duda-color"><img src="assets/img/interrogante.png" alt="Duda color"></label>
+				</div>
+			</figure>
+		</article>
+
+		<!-- FORMA -->
+		<article>
+			<h2>Forma de la copa</h2>
+
+			<figure>
+				<div>
+		            <input id="hongo-conico" type="radio" formControlName="shape" value="Q19887954" 	>
+		            <label for="hongo-conico"><img src="assets/img/Q19887954.png" alt="Hongo cónico"></label>
+		        </div>
+
+		        <div>
+		        	<input id="hongo-convexo" type="radio" formControlName="shape" value="Q14544535">
+		        	<label for="hongo-convexo"><img src="assets/img/Q14544535.png" alt="Hongo convexo"></label>
+		        </div>
+
+		        <div>
+		        	<input id="seta-deprimida" type="radio" formControlName="shape" value="Q19887955">
+		       		<label for="seta-deprimida"><img src="assets/img/Q19887955.png" alt="Seta deprimida"></label>
+		        </div>
+
+            	<div>
+            		<input id="plana-setas" type="radio" formControlName="shape" value="Q19887957">
+            		<label for="plana-setas"><img src="assets/img/Q19887957.png" alt="Seta plana"></label>
+            	</div>
+
+            	<div>
+            		<input id="infundi" type="radio" formControlName="shape" value="Q19887958">
+            		<label for="infundi"><img src="assets/img/Q19887958.png" alt="Infundi"></label>
+            	</div>
+
+            	<div>
+            		<input id="seta-offset" type="radio" formControlName="shape" value="Q14544541">
+            		<label for="seta-offset"><img src="assets/img/Q14544541.png" alt="Seta offset"></label>
+            	</div>
+
+            	<div>
+            		<input id="seta-ovada" type="radio" formControlName="shape" value="Q19887961">
+            		<label for="seta-ovada"><img src="assets/img/Q19887961.png" alt="Seta ovada"></label>
+            	</div>
+
+            	<div>
+            		<input id="tapa-hongo" type="radio" formControlName="shape" value="Q19887964">
+            		<label for="tapa-hongo"><img src="assets/img/Q19887964.png" alt="Tapa umbonate"></label>
+            	</div>
+
+            	<div>
+            		<input id="sin-tapa" type="radio" formControlName="shape" value="Q19887965">
+            		<label for="sin-tapa"><img src="assets/img/Q19887965.png" alt="Sin tapa"></label>
+            	</div>
+
+            	<div>
+            		<input id="concavo-plano" type="radio" formControlName="shape" value="Q23058598">
+            		<label for="concavo-plano"><img src="assets/img/Q23058598.png" alt="Cóncavo al plano"></label>
+            	</div>
+
+            	<div>
+					<input id="duda-forma" type="radio" formControlName="shape" value="" checked>
+					<label for="duda-forma"><img src="assets/img/interrogante.png" alt="Duda forma"></label>
+				</div>
+			</figure>
+		</article>
+
+
+		<!-- CARACTER DEL ESTIPE -->
+		<article>
+			<h2>Caracter del estipe</h2>
+
+			<figure>
+				<div>
+		            <input id="estipe-desnudo" type="radio" formControlName="estipe" value="Q14544581">
+		            <label for="estipe-desnudo"><img src="assets/img/Q14544581.png" alt="Estipe desnudo"></label>
+		        </div>
+
+		        <div>
+		        	<input id="anilla-anillo" type="radio" formControlName="estipe" value="Q14544582">
+		        	<label for="anilla-anillo"><img src="assets/img/Q14544582.png" alt="Anilla de anillo"></label>
+		        </div>
+
+		        <div>
+		        	<input id="stipe-volva" type="radio" formControlName="estipe" value="Q19887985">
+		        	<label for="stipe-volva"><img src="assets/img/Q19887985.png" alt="Estipe volva"></label>
+		        </div>
+
+				<div>
+					<input id="anillo-stipe" type="radio" formControlName="estipe" value="Q19887987">
+					<label for="anillo-stipe"><img src="assets/img/Q19887987.png" alt="Estipe de anillo y volva"></label>
+				</div>
+
+				<div>
+					<input id="cortina-stipe" type="radio" formControlName="estipe" value="Q19887988">
+					<label for="cortina-stipe"><img src="assets/img/Q19887988.png" alt="Estipe cortina"></label>
+				</div>
+
+				<div>
+					<input id="duda-stipe" type="radio" formControlName="estipe" value="" checked>
+					<label for="duda-stipe"><img src="assets/img/interrogante.png" alt="Duda estipe"></label>
+				</div>
+		    </figure>
+		</article>
+
+		<!-- ACCESORIO DEL HIMENIO -->
+		<article>
+			<h2>Accesorio del himenio</h2>
+
+			<figure>
+				<div>
+		            <input id="adenato-himen" type="radio" formControlName="himenio" value="Q14544569">
+		            <label for="adenato-himen"><img src="assets/img/Q14544569.png" alt="Adenato de himen"></label>
+		        </div>
+
+		        <div>
+		        	<input id="himenio-anexado" type="radio" formControlName="himenio" value="Q19887923">
+		        	<label for="himenio-anexado"><img src="assets/img/Q19887923.png" alt="Himenio anexado"></label>
+		        </div>
+
+		        <div>
+		        	<input id="himenio-decurrente" type="radio" formControlName="himenio" 	value="Q19887925">
+		        	<label for="himenio-decurrente"><img src="assets/img/Q19887925.png" alt="Himenio decurrente"></label>
+		        </div>
+
+		        <div>
+		        	<input id="himenio-emarginado" type="radio" formControlName="himenio" 	value="Q19887926">
+		        	<label for="himenio-emarginado"><img src="assets/img/Q19887926.png" alt="Himenio emarginado"></label>
+		        </div>
+
+		        <div>
+		        	<input id="himenio-libre" type="radio" formControlName="himenio" value="Q14544563">
+		        	<label for="himenio-libre"><img src="assets/img/Q14544563.png" alt="Himenio libre"></label>
+		        </div>
+
+		        <div>
+		        	<input id="himenio-secante" type="radio" formControlName="himenio" value="Q19887929">
+		        	<label for="himenio-secante"><img src="assets/img/Q19887929.png" alt="Himenio secante"></label>
+		        </div>
+
+		        <div>
+		        	<input id="sinuato-himen" type="radio" formControlName="himenio" value="Q19887930">
+		        	<label for="sinuato-himen"><img src="assets/img/Q19887930.png" alt="Himenio ondeado"></label>
+		        </div>
+
+		        <div>
+		        	<input id="subdecurrente" type="radio" formControlName="himenio" value="Q19887931">
+		        	<label for="subdecurrente"><img src="assets/img/Q19887931.png" alt="Himenio subdecente"></label>
+		        </div>
+
+		        <div>
+		        	<input id="sin-himenio" type="radio" formControlName="himenio" value="Q19887932">
+		        	<label for="sin-himenio"><img src="assets/img/Q19887932.png" alt="Sin himenio"></label>
+		        </div>
+
+		        <div>
+					<input id="duda-himenio" type="radio" formControlName="himenio" value="" checked>
+					<label for="duda-himenio"><img src="assets/img/interrogante.png" alt="Duda himenio"></label>
+				</div>
+		    </figure>
+		</article>
+
+		<!-- TIPO DE HIMENIO -->
+		<article>
+			<h2>Tipo de himenio</h2>
+
+			<figure>
+				<div>
+		            <input id="laminas" type="radio" formControlName="t_himenio" value="Q269345">
+		            <label for="laminas"><img src="assets/img/Q269345.png" alt="Láminas"></label>
+		        </div>
+
+		        <div>
+		        	<input id="poros" type="radio" formControlName="t_himenio" value="Q19861549">
+		        	<label for="poros"><img src="assets/img/Q19861549.png" alt="Poros"></label>
+		        </div>
+
+		        <div>
+		        	<input id="liso" type="radio" formControlName="t_himenio" value="Q19861550">
+		        	<label for="liso"><img src="assets/img/Q19861550.png" alt="Liso"></label>
+		        </div>
+
+		        <div>
+		        	<input id="crestas" type="radio" formControlName="t_himenio" value="Q19861551">
+		        	<label for="crestas"><img src="assets/img/Q19861551.png" alt="Crestas"></label>
+		        </div>
+
+		        <div>
+		        	<input id="dientes" type="radio" formControlName="t_himenio" value="Q19861552">
+		        	<label for="dientes"><img src="assets/img/Q19861552.png" alt="Dientes"></label>
+		        </div>
+
+		        <div>
+		        	<input id="carnosa" type="radio" formControlName="t_himenio" value="Q2034230">
+		        	<label for="carnosa"><img src="assets/img/Q2034230.png" alt="Carnosa"></label>
+		        </div>
+
+		        <div>
+					<input id="duda-t_himenio" type="radio" formControlName="t_himenio" value="" checked>
+					<label for="duda-t_himenio"><img src="assets/img/interrogante.png" alt="Duda tipo de himenio"></label>
+				</div>
+		    </figure>
+		</article>
+
+		<div class="content-button">
+			<button class="button button-xxl" (click)="busqueda_avanzada();">Buscar</button>
+		</div>
+
+    </form>
+
+    <div class="card-columns">
+      <div class="card" *ngFor="let result of resultados">
+        <img [src]="result.imagen.value" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{result.AgaricalesLabel.value}}</h5>
+          <p class="card-text">Comestibilidad: {{result.comestibilidadLabel.value}}</p>
+        </div>
+      </div>
+    </div>
+    <h2>{{no_resultados}}</h2>
+
+	</main>
