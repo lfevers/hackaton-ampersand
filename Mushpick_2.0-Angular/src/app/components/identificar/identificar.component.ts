@@ -8,7 +8,7 @@ import { WikidataService } from '../../services/wikidata.service';
 })
 export class IdentificarComponent implements OnInit {
 
-  constructor() { }
+  constructor( public _wikidataService:WikidataService) { }
 
   ngOnInit() {
   }
